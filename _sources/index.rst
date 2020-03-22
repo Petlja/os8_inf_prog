@@ -50,4 +50,5 @@
    :maxdepth: 1
 
    L801.rst
+   L802.rst
 
