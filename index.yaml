@@ -1,0 +1,77 @@
+ime: Осми разред, основна школа
+dBalias: осми-машке
+logo: 8оlogo.png
+nauciti:
+  - Кроз ове лекције упознаћеш се са Jupyter-oм.
+potrebno:
+  - инсталиран Python, Jupyter
+linkovi:
+sadrzaj:
+  - Jupyter окружење
+  - Записивање података
+
+lekcije:
+
+  - tip: section 
+    ime: Час 1
+    order: 1
+    content:
+    opis:  #
+    alias: cas1
+    
+  - tip: html 
+    ime: Увод у процесирање низова података
+    order: 
+    content: L801.html
+    opis: #
+    alias: L801
+    
+  - tip: quiz 
+    ime: Увод у процесирање низова података - тест
+    order: #
+    content: test801.html
+    opis: #
+    alias: test801
+    
+  - tip: section 
+    ime: Час 2
+    order: 2
+    content:
+    opis:  #
+    alias: cas2
+
+  - tip: html 
+    ime: Бројачи и суме
+    order: #
+    content: L802.html
+    opis: #
+    alias: L802
+    
+  - tip: quiz
+    ime: Бројачи и суме - тeст
+    order: 
+    content: test802.html
+    opis: 
+    alias: test802
+
+  - tip: section 
+    ime: Час 3
+    order: 3
+    content:
+    opis:  #
+    alias: cas3
+
+- tip: html 
+    ime: Низови симбола
+    order: #
+    content: L803.html
+    opis: #
+    alias: L803
+    
+  - tip: quiz
+    ime: Низови симбола - тeст
+    order: 
+    content: test803.html
+    opis: 
+    alias: test803
+
