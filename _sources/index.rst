@@ -85,3 +85,15 @@
    L805.rst
    L806.rst
    test806.rst
+   L807.rst
+   test807.rst
+   L808.rst
+   test808.rst
+   L809.rst
+   test809.rst
+   L810.rst
+   test810.rst
+   L811.rst
+   test811.rst
+   L812.rst
+   test812.rst

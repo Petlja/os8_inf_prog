@@ -108,3 +108,75 @@ lekcije: # 5 tipova lekcija: section, html, pdf, video ili quiz. template svake 
     content: test806.html
     opis: 2, 1, 3, 0
     alias: programiranje-test5
+  - tip: html
+    ime: Хистограми и боје
+    order: 
+    content: L807.html
+    opis:
+    alias: programiranje-lekcija7
+  - tip: quiz
+    ime: Teст 6
+    order: 
+    content: test807.html
+    opis: 1, 3, 2, 3
+    alias: programiranje-test6
+  - tip: html
+    ime: Просек и медијана низа бројева
+    order: 
+    content: L808.html
+    opis:
+    alias: programiranje-lekcija8
+  - tip: quiz
+    ime: Teст 7
+    order: 
+    content: test808.html
+    opis: 3, 0, 1, 2, 0, 1
+    alias: programiranje-test8
+  - tip: html
+    ime: Фреквенцијска анализа и секторски дијаграми
+    order: 
+    content: L809.html
+    opis:
+    alias: programiranje-lekcija9
+  - tip: quiz
+    ime: Teст 8
+    order: 
+    content: test809.html
+    opis: 3, 0, 3, 2
+    alias: programiranje-test9
+  - tip: html
+    ime: Табеларно представљени подаци
+    order: 
+    content: L810.html
+    opis:
+    alias: programiranje-lekcija10
+  - tip: quiz
+    ime: Teст 9
+    order: 
+    content: test810.html
+    opis: 2, 2, 1, 0, 1, 0
+    alias: programiranje-test10
+  - tip: html
+    ime: Индексирање и транспоновање табеле
+    order: 
+    content: L811.html
+    opis:
+    alias: programiranje-lekcija11
+  - tip: quiz
+    ime: Teст 10
+    order: 
+    content: test811.html
+    opis: 1, 3, 3, 3
+    alias: programiranje-test11
+  - tip: html
+    ime: Модификације табеле и записивање табеле у датотеку
+    order: 
+    content: L812.html
+    opis:
+    alias: programiranje-lekcija12
+  - tip: quiz
+    ime: Teст 11
+    order: 
+    content: test812.html
+    opis: 0, 2, 3, 3
+    alias: programiranje-test12
