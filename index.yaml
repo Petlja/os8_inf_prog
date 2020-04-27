@@ -12,7 +12,7 @@ potrebno:
 linkovi:
   - https://petlja.org/skola/osnovna/sedmi < Dodatni materijali
 sadrzaj:
-  - Подсећање: Основе програмирања у Пајтону
+  - Основе програмирања у Пајтону
   - 1. Увод у процесирање низова података
   - 2. Бројачи и суме
   - 3. Стрингови
@@ -26,12 +26,12 @@ sadrzaj:
   - 6. Табеларно представљени подаци
   - 7. Индексирање и транспоновање табеле
   - 8. Модификације табеле и записивање табеле у датотеку
-  - Додатне теме:
+  - Додатне теме
   - 9. Сортирање, филтрирање и фреквенцијска анализа
   - 10. Џупитер и Ексел
 lekcije: # 5 tipova lekcija: section, html, pdf, video ili quiz. template svake lekcije je isti.
   - tip: section 
-    ime: Подсећање: Основе програмирања у Пајтону
+    ime: Основе програмирања у Пајтону
     order: 1 #kod sekcije postoji u suprotnom prazan, ako mozda iz nekog razloga zelite da promesate redosled sekcija dozvoljeno je. Neophodno je zapamtiti da sve lekcije koje se nalaze ispod neke sekcije pripadaju toj sekciji, sve do sledece sekcije. (nema duplog ugnjezdavanja)
     content: #kod sekcije prazan, kod html-a, quiz-a i pdf-a putanja do file-a, kod yt link
     opis:
