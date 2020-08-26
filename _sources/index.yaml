@@ -16,17 +16,17 @@ description:
     - Имаш инсталиран Пајтон
     - Имаш рачунар са приступом интернету
   toc:
-    - РАЧУНАРСТВО (РАЧ)
-    - РАЧ.1. Увод у Џупитер (*Jupyter*)
-    - РАЧ.2. Низови података и линијски дијаграми
-    - РАЧ.3. Хистограми и боје
-    - РАЧ.4. Просек и медијана низа бројева
-    - РАЧ.5. Фреквенцијска анализа и секторски дијаграми
-    - РАЧ.6. Табеларно представљени подаци
-    - РАЧ.7. Индексирање и транспоновање табеле
-    - РАЧ.8. Модификације табеле и записивање табеле у датотеку
-    - РАЧ.9. Сортирање, филтрирање и фреквенцијска анализа
-    - РАЧ.10. Џупитер и Ексел
+    - РАЧУНАРСТВО
+    - 1. Увод у Џупитер (*Jupyter*)
+    - 2. Низови података и линијски дијаграми
+    - 3. Хистограми и боје
+    - 4. Просек и медијана низа бројева
+    - 5. Фреквенцијска анализа и секторски дијаграми
+    - 6. Табеларно представљени подаци
+    - 7. Индексирање и транспоновање табеле
+    - 8. Модификације табеле и записивање табеле у датотеку
+    - 9. Сортирање, филтрирање и фреквенцијска анализа
+    - 10. Џупитер и Ексел
 
 lessons:
   #########################################################################
@@ -37,10 +37,10 @@ lessons:
     guid: 57f0351f-0af5-4cca-bb22-405a8dd506ec
     activities:
       - type: reading
-        title: Лекција
+        title: Увод
         file: J0A.rst
         guid: a881c6a8-b952-49b1-9a52-66c8e4da2c32
-  - title: РАЧ.1.
+  - title: 1. Увод у Џупитер (*Jupyter*)
     folder: J01
     guid: fc70fa3d-6cfd-4da2-9b2f-ae4ce4d56342
     activities:
@@ -48,7 +48,7 @@ lessons:
         title: Лекција
         file: J01.rst
         guid: 75ffb1f6-65ce-4813-8561-43f09fd730c2
-  - title: РАЧ.2.
+  - title: 2. Низови података и линијски дијаграми
     folder: J02
     guid: 37d8ff96-8db0-4f9d-a0e4-4edbc129b966
     activities:
@@ -60,7 +60,7 @@ lessons:
         title: Тест
         file: testJ02.rst
         guid: 9240abe3-cb61-4bd7-a210-45d625d0a1c9
-  - title: РАЧ.3.
+  - title: 3. Хистограми и боје
     folder: J03
     guid: 431ba1e5-f7f6-457d-be06-1b7b6f346c9f
     activities:
@@ -72,7 +72,7 @@ lessons:
         title: Тест
         file: testJ03.rst
         guid: 0cf9776c-645c-4c77-99b0-adad60887274
-  - title: РАЧ.4.
+  - title: 4. Просек и медијана низа бројева
     folder: J04
     guid: f5fc2c48-91a8-40b6-8af1-b274d9cc9c28
     activities:
@@ -84,7 +84,7 @@ lessons:
         title: Тест
         file: testJ04.rst
         guid: c9960c75-a7a7-46ed-b3fc-6232000a05e9
-  - title: РАЧ.5.
+  - title: 5. Фреквенцијска анализа и секторски дијаграми
     folder: J05
     guid: 2f5f4da8-7eff-429e-837b-c5fbdf877a85
     activities:
@@ -96,7 +96,7 @@ lessons:
         title: Тест
         file: testJ05.rst
         guid: 7665c9fb-fc59-418f-ad83-5d4abb930557
-  - title: РАЧ.6.
+  - title: 6. Табеларно представљени подаци
     folder: J06
     guid: 702b161e-cbf6-45ce-b51b-8a746469670f
     activities:
@@ -108,7 +108,7 @@ lessons:
         title: Тест
         file: testJ06.rst
         guid: ba5720ee-9b0d-45ca-b655-e35ddaae4c1c
-  - title: РАЧ.7.
+  - title: 7. Индексирање и транспоновање табеле
     folder: J07
     guid: 90930251-c14a-43cd-889c-2df9a832a1c1
     activities:
@@ -120,7 +120,7 @@ lessons:
         title: Тест
         file: testJ07.rst
         guid: ed505e2e-f785-4d93-8daa-a2277772bf0b
-  - title: РАЧ.8.
+  - title: 8. Модификације табеле и записивање табеле у датотеку
     folder: J08
     guid: 44704cbf-f354-40b0-ad38-c40e50fbef93
     activities:
@@ -132,7 +132,7 @@ lessons:
         title: Тест
         file: testJ08.rst
         guid: 73c13268-3cf9-4958-a6e8-a9ea1b5d373f
-  - title: РАЧ.9.
+  - title: 9. Сортирање, филтрирање и фреквенцијска анализа
     folder: J09
     guid: eba4e02e-be6b-421e-b65c-b7835dbb3c31
     activities:
@@ -144,7 +144,7 @@ lessons:
         title: Тест
         file: testJ09.rst
         guid: 13a089d9-0fff-4332-b6e8-3c0868d10874
-  - title: РАЧ.10.
+  - title: 10. Џупитер и Ексел
     folder: J10
     guid: 02778fae-ad2a-412e-b638-91bcabbc3cec
     activities:
