@@ -1,0 +1,50 @@
+Визуелизација табеларно представљених података
+====================================================
+
+Визуелизација података из табеле се своди на то да се одаберу интересантне колоне табеле и прикажу неком од техника које смо раније видели. Прво ћемо учитати одговарајућу библиотеку:
+
+.. ipython::
+
+   In [1]: import matplotlib.pyplot as plt
+
+Ако желимо хистограмом да представимо висину деце у групи, одабраћемо колоне "Име" и "Висина" и приказати их, рецимо овако:
+
+.. ipython::
+   :okwarning:
+
+   @savefig J06slika1.png
+   In [1]: plt.figure(figsize=(10,5))
+      ...: plt.bar(tabela["Ime"], tabela["Visina"])
+      ...: plt.title("Visina dece u grupi")
+      ...: plt.show()
+
+.. ipython::
+   :suppress:
+
+   In [1]: plt.close()
+
+Као други пример представићемо тежину и старост деце у групи тако да тежина буде представљена црвеним стубићима, а старост зеленом. Приказаћемо и легенду да би било јасно шта која боја представља.
+
+.. ipython::
+   :okwarning:
+
+   @savefig J06slika2.png
+   In [1]: plt.figure(figsize=(10,5))
+      ...: plt.bar(tabela["Ime"], tabela["Masa"], color="r", label="Masa")
+      ...: plt.bar(tabela["Ime"], tabela["Starost"], color="g", label="Starost")
+      ...: plt.title("Starost i masa dece u grupi")
+      ...: plt.legend()
+      ...: plt.show()
+
+.. ipython::
+   :suppress:
+
+   In [1]: plt.close()
+
+Ево и кратког видеа:
+
+.. ytpopup:: xpmbKEcZplc
+   :width: 735
+   :height: 415
+   :align: center
+

@@ -48,42 +48,62 @@ lessons:
   #########################################################################
   #  JUPYTER
   #########################################################################
-  - title: Припрема
-    folder: J0A
-    guid: 57f0351f-0af5-4cca-bb22-405a8dd506ec
-    activities:
-      - type: reading
-        title: Увод
-        file: J0A.rst
-        guid: a881c6a8-b952-49b1-9a52-66c8e4da2c32
-  - title: 1. Увод у Џупитер (*Jupyter*)
+  - title: 1. Увод у Џупитер (Jupyter)
     folder: J01
     guid: fc70fa3d-6cfd-4da2-9b2f-ae4ce4d56342
     activities:
       - type: reading
-        title: Лекција
+        title: Џупитер (Jupyter) је радна свеска 21. века
+        file: J0A.rst
+        guid: e5c9c3f9-512b-40d8-96a2-b6464196626b
+      - type: reading
+        title: Џупитер уме да рачуна и извршава Пајтон програме
         file: J01.rst
         guid: 75ffb1f6-65ce-4813-8561-43f09fd730c2
+      - type: reading
+        title: Библиотеке функција
+        file: J01B.rst
+        guid: 99e7e4a0-4730-4d61-8df9-39dcab5109d5
+      - type: reading
+        title: Задаци вежбу
+        file: J01Z.rst
+        guid: d0469941-b619-4882-9d5c-ccd455dead1e
   - title: 2. Низови података и линијски дијаграми
     folder: J02
     guid: 37d8ff96-8db0-4f9d-a0e4-4edbc129b966
     activities:
       - type: reading
-        title: Лекција
+        title: Записивање низова података
         file: J02.rst
         guid: d74de1ed-a619-4e96-a051-ccb6b83ade94
+      - type: reading
+        title: Визуелизација низова података
+        file: J02B.rst
+        guid: 9a203500-8bbe-4203-bb4d-2aa8a77ca471
+      - type: reading
+        title: Задаци за вежбу
+        file: J02Z.rst
+        guid: 79649299-66f3-4edd-b105-c1336d778cac
       - type: quiz 
         title: Квиз
         file: testJ02.rst
         guid: 9240abe3-cb61-4bd7-a210-45d625d0a1c9
-  - title: 3. Хистограми и боје
+  - title: 3. Хистограми за мале групе података
     folder: J03
     guid: 431ba1e5-f7f6-457d-be06-1b7b6f346c9f
     activities:
       - type: reading
-        title: Лекција
+        title: Хистограми и боје
         file: J03.rst
         guid: 72f7632d-e790-4cd2-bbff-3cd43b382353
+      - type: reading
+        title: Две групе података на истом дијаграму
+        file: J03B.rst
+        guid: bf8f6cd1-447c-4132-ab03-23a7963437d0
+      - type: reading
+        title: Задаци за вежбу
+        file: J03Z.rst
+        guid: ba60d05e-87a1-40c4-8140-d79139123f0c
       - type: quiz 
         title: Квиз
         file: testJ03.rst
@@ -93,9 +113,25 @@ lessons:
     guid: f5fc2c48-91a8-40b6-8af1-b274d9cc9c28
     activities:
       - type: reading
-        title: Лекција
+        title: Просек низа бројева
         file: J04.rst
         guid: 55fd3835-2c20-41c9-8a59-a22e83d6b379
+      - type: reading
+        title: Сортирање и медијана
+        file: J04C.rst
+        guid: 9238d850-0beb-4f27-9b52-04d2c9448e12
+      - type: reading
+        title: Филтрирање података
+        file: J04D.rst
+        guid: 1aba1a71-9aaf-498d-a85e-00a4e5a69239
+      - type: reading
+        title: Приказивање просека и медијане
+        file: J04E.rst
+        guid: 2541a13d-936c-4f87-a2ab-8d3826a36154
+      - type: reading
+        title: Задаци за вежбу
+        file: J04Z.rst
+        guid: dadc9542-5c62-492c-8521-205ee11e2b76
       - type: quiz 
         title: Квиз
         file: testJ04.rst
@@ -105,9 +141,17 @@ lessons:
     guid: 2f5f4da8-7eff-429e-837b-c5fbdf877a85
     activities:
       - type: reading
-        title: Лекција
+        title: Фреквенцијска анализа низа података
         file: J05.rst
         guid: fc121b1a-d67a-44c5-b602-ed872f120601
+      - type: reading
+        title: Секторски дијаграми
+        file: J05B.rst
+        guid: 2725447b-b6b6-46cf-aec2-253b4eb1cf2f
+      - type: reading
+        title: Задаци за вежбу
+        file: J05Z.rst
+        guid: d79d284c-d610-403f-86a0-5e20be6e200d
       - type: quiz 
         title: Квиз
         file: testJ05.rst
@@ -117,9 +161,25 @@ lessons:
     guid: 702b161e-cbf6-45ce-b51b-8a746469670f
     activities:
       - type: reading
-        title: Лекција
+        title: Представљање табела помоћу листи (није ефикасно)
         file: J06.rst
         guid: d4a86a8b-c345-4ad9-9fcb-3d61a862d4ad
+      - type: reading
+        title: Библиотека pandas -- ефикасно представљање табеларних података
+        file: J06B.rst
+        guid: 8b92d04a-1fbe-4f3d-858c-5f878986c0b9
+      - type: reading
+        title: Визуелизација табеларно представљених података
+        file: J06C.rst
+        guid: a48117fc-03ac-4ce1-b3a5-43ca77562313
+      - type: reading
+        title: Учитавање података из локалних датотека и удаљених ресурса
+        file: J06D.rst
+        guid: 3d477033-37a4-47b7-bc74-a5c02f4def6e
+      - type: reading
+        title: Задаци за вежбу
+        file: J06Z.rst
+        guid: 7af47ad3-2776-4961-803f-669e92cb0257
       - type: quiz 
         title: Квиз
         file: testJ06.rst
@@ -129,9 +189,25 @@ lessons:
     guid: 90930251-c14a-43cd-889c-2df9a832a1c1
     activities:
       - type: reading
-        title: Лекција
+        title: Индексирање табеле
         file: J07.rst
         guid: 4550727a-f260-4f68-aab8-a91caf0f6341
+      - type: reading
+        title: Приступ елементима индексиране табеле
+        file: J07B.rst
+        guid: 140b6ae1-0c3b-4b57-92df-bb3b5653aef8
+      - type: reading
+        title: Рачун по врстама и колонама табеле
+        file: J07C.rst
+        guid: 3a839af7-2100-4bdc-bb01-480f006a9170
+      - type: reading
+        title: Транспоновање табеле
+        file: J07D.rst
+        guid: 8f059108-f2bd-4061-a4c3-f14d766ad21b
+      - type: reading
+        title: Задаци за вежбу
+        file: J07Z.rst
+        guid: 733209bf-b2f2-4bb4-8e09-8dbe584956d2
       - type: quiz 
         title: Квиз
         file: testJ07.rst
@@ -141,9 +217,17 @@ lessons:
     guid: 44704cbf-f354-40b0-ad38-c40e50fbef93
     activities:
       - type: reading
-        title: Лекција
+        title: Додавање нове врсте или колоне табели
         file: J08.rst
         guid: 64889144-fd61-458c-b3a9-f6e73a99f5d8
+      - type: reading
+        title: Записивање табеле у датотеку
+        file: J08B.rst
+        guid: 1339cd42-a36d-48fd-aa2c-e06a80302cd5
+      - type: reading
+        title: Задаци за вежбу
+        file: J08Z.rst
+        guid: 6718738a-8bb9-4131-8b5f-dd0fc4ab3ad8
       - type: quiz 
         title: Квиз
         file: testJ08.rst
@@ -153,9 +237,21 @@ lessons:
     guid: eba4e02e-be6b-421e-b65c-b7835dbb3c31
     activities:
       - type: reading
-        title: Лекција
+        title: Pandas и сортирање података
         file: J09.rst
         guid: a47928cf-3062-4b58-a16e-e7a606757434
+      - type: reading
+        title: Pandas и филтрирање података
+        file: J09B.rst
+        guid: 34c796d8-4973-404d-ad98-c3fa4c410ac1
+      - type: reading
+        title: Pandas и фреквенцијска анализа
+        file: J09C.rst
+        guid: 6af0bb6a-4b5c-40ee-9384-fc75930ea4c9
+      - type: reading
+        title: Задаци за вежбу
+        file: J09Z.rst
+        guid: c72f7449-a27b-41a3-96c2-9ea072cac690
       - type: quiz 
         title: Квиз
         file: testJ09.rst
@@ -165,9 +261,21 @@ lessons:
     guid: 02778fae-ad2a-412e-b638-91bcabbc3cec
     activities:
       - type: reading
-        title: Лекција
+        title: Зашто Џупитер, а зашто Ексел
         file: J10.rst
         guid: c23b8f42-44e1-4404-abd7-8e91889e3206
+      - type: reading
+        title: Учитавање података из Ексел датотека
+        file: J10B.rst
+        guid: 81295e22-0ead-4a25-82b1-cf90ab3e14ff
+      - type: reading
+        title: Уписивање табеле у Ексел датотеку
+        file: J10C.rst
+        guid: a6b47780-71c5-4460-8c7b-4ac563f84b13
+      - type: reading
+        title: Задаци за вежбу
+        file: J10Z.rst
+        guid: b7ec8467-0144-484e-b7db-ff2e611c2613
       - type: quiz 
         title: Квиз
         file: testJ10.rst

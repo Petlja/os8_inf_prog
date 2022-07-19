@@ -1,0 +1,143 @@
+Pandas и фреквенцијска анализа
+===================================
+
+.. infonote::
+
+    Фреквенцијска анализа низа података се своди на то да се преброји колико
+    се пута који податак појављује у низу.
+
+Док смо раније морали доста тога сами да урадимо, библиотека ``pandas`` има функцију ``value_counts`` која врши фреквенцијску анализу (енгл. *value* значи "вредност", док *count* значи "бројати"; дакле, пребројати вредности).
+
+Ево примера. Ако у табели са којом радимо желимо да пребројимо дечаке и девојчице, то можемо учинити позивом функције ``value_counts`` овако:
+
+.. ipython::
+
+   In [1]: tabela1["Pol"].value_counts()
+
+Функција ``value_counts`` је у колони "Pol" пребројала све вредности и утврдила да се у тој колони вредност "ž" појављује 6 пута, док се вредност "m" појављује 5 пута.
+
+Ако желимо да утврдимо старосну структуру групе, применићемо функцију ``value_counts`` на колону "Starost":
+
+.. ipython::
+
+   In [1]: tabela1["Starost"].value_counts()
+
+Функција ``value_counts`` је у колони "Starost" пребројала све вредности и утврдила да се у тој колони вредности 15 и 13 појављују по 4 пута, док се вредност 14 појављује 3 пута.
+
+Ако резултат рада функције ``value_counts`` сместимо у променљиву:
+
+.. ipython::
+
+   In [1]: frekv = tabela1["Pol"].value_counts()
+      ...: frekv
+
+онда можемо лако да реконструишемо које су вредности уочене у табели, и које су њихове фреквенције. Наиме,
+
+.. code-block:: python
+
+    frekv.index
+
+
+нам даје листу уочених вредности, док
+
+.. code-block:: python
+
+    frekv.values
+
+даје њихове фреквенције.
+
+.. ipython::
+
+   In [1]: print("Vrednosti koje se javljaju u koloni:", frekv.index)
+      ...: print("Njihove frekvencije:", frekv.values)
+
+Полну структуру ове групе деце можемо да прикажемо секторским дијаграмом овако:
+
+.. ipython::
+   :okwarning:
+
+   @savefig J09slika3.png
+   In [1]: import matplotlib.pyplot as plt
+      ...: frekv = tabela1["Pol"].value_counts()
+      ...: plt.figure(figsize=(6,6))
+      ...: plt.pie(frekv.values, labels=frekv.index)
+      ...: plt.title("Polna struktura grupe")
+      ...: plt.show()
+
+.. ipython::
+   :suppress:
+
+   In [1]: plt.close()
+
+На сличан начин можемо да прикажемо старосну структуру групе:
+
+.. ipython::
+   :okwarning:
+
+   @savefig J09slika4.png
+   In [1]: frekv = tabela1["Starost"].value_counts()
+      ...: plt.figure(figsize=(6,6))
+      ...: plt.pie(frekv.values, labels=frekv.index)
+      ...: plt.title("Starosna struktura grupe")
+      ...: plt.show()
+
+.. ipython::
+   :suppress:
+
+   In [1]: plt.close()
+
+
+Следе две кратке видео илустрације:
+
+.. ytpopup:: UOKOYyfw8Rw
+   :width: 735
+   :height: 415
+   :align: center
+
+.. ytpopup:: vCGkTXeSv5E
+   :width: 735
+   :height: 415
+   :align: center
+
+
+Пример
+------------
+
+На адреси
+
+.. code-block:: text
+
+    https://raw.githubusercontent.com/cs109/2014_data/master/countries.csv
+
+се налази јавно доступан списак свих држава на свету. Ову табелу можемо лако учитати наредбом ``read_csv``:
+
+.. ipython::
+
+   In [1]: drzave = pd.read_csv("https://raw.githubusercontent.com/cs109/2014_data/master/countries.csv")
+      ...: drzave.head(5)
+
+Број држава по континентима можемо видети овако:
+
+.. ipython::
+
+   In [1]: drzave["Region"].value_counts()
+
+Прикажимо број држава по континентима секторским дијаграмом:
+
+.. ipython::
+   :okwarning:
+
+   @savefig J09slika5.png
+   In [1]: import matplotlib.pyplot as plt
+      ...: po_kontinentima = drzave["Region"].value_counts()
+      ...: plt.figure(figsize=(8,8))
+      ...: plt.pie(po_kontinentima.values, labels=po_kontinentima.index)
+      ...: plt.title("Број држава по континентима")
+      ...: plt.show()
+
+.. ipython::
+   :suppress:
+
+   In [1]: plt.close()
+
+
