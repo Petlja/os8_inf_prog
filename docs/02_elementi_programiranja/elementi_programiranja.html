@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Елементи програмирања у Пајтону</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'Osmi_programiranje';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'Osmi_programiranje';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Анализа и презентација података у Џупитеру</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Jupyter>
+                    <h5>Пре него што почнеш</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Jupyter/howto.html><div class="studioLecture" id=activity-howto><i class="fas fa-file-alt activity-icon"></i>Како да користиш приручник</div></a>
+                <a href=../01_Jupyter/J0A.html><div class="studioLecture" id=activity-J0A><i class="fas fa-file-alt activity-icon"></i>Покретање Џупитер (*Jupyter*) радних свески</div></a>
+                <a href=../01_Jupyter/J01.html><div class="studioLecture" id=activity-J01><i class="fas fa-file-alt activity-icon"></i>Увод у Џупитер (*Jupyter*)</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_elementi_programiranja>
+                    <h5>Елементи програмирања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_elementi_programiranja/elementi_programiranja.html><div class="studioLecture" id=activity-elementi_programiranja><i class="fas fa-file-alt activity-icon"></i>Елементи програмирања у Пајтону</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_nizovi>
+                    <h5>Рад са низовима података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_nizovi/nizovi.html><div class="studioLecture" id=activity-nizovi><i class="fas fa-file-alt activity-icon"></i>Рад са низовима података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_graficko>
+                    <h5>Графичко представљање података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_graficko/graficko.html><div class="studioLecture" id=activity-graficko><i class="fas fa-file-alt activity-icon"></i>Графичко представљање података</div></a>
+                <a href=../04_graficko/graficko2.html><div class="studioLecture" id=activity-graficko2><i class="fas fa-file-alt activity-icon"></i>Линијски, тачкасти и стубични дијаграми</div></a>
+                <a href=../04_graficko/hist.html><div class="studioLecture" id=activity-hist><i class="fas fa-file-alt activity-icon"></i>Хистограм</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_tabele>
+                    <h5>Рад са табелама помоћу библиотеке Pandas</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_tabele/tabele_pandas.html><div class="studioLecture" id=activity-tabele_pandas><i class="fas fa-file-alt activity-icon"></i>Представљање табеларно задатих података помоћу листи</div></a>
+                <a href=../05_tabele/data_frame.html><div class="studioLecture" id=activity-data_frame><i class="fas fa-file-alt activity-icon"></i>Библиотека pandas и структура података DataFrame</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_obrada_i_prikaz>
+                    <h5>Основе обраде и приказа табеларних података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_obrada_i_prikaz/obrada.html><div class="studioLecture" id=activity-obrada><i class="fas fa-file-alt activity-icon"></i>Обрада табеларних података</div></a>
+                <a href=../06_obrada_i_prikaz/prikaz.html><div class="studioLecture" id=activity-prikaz><i class="fas fa-file-alt activity-icon"></i>Статистички и графички приказ табеларних података</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Елементи програмирања у Пајтону<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Имајући у виду да ученици осмог разреда могу имати битно различито
+предзнање и искуство у програмирању, на почетку овог приручника
+дајемо кратак преглед елеменaта и правила потребних за програмирање у
+Пајтону. Некима су ови елементи познати па не морају да се задржавају
+на овом тексту. Другима је згодно да имају подсетник или да опет
+прочитају шта су основни елементи. Сами одлучите на који начин ћете
+читати текст или пробати линије кôда у овој свесци.</p>
+</div></blockquote>
+<div class="section" id="id2">
+<h2>Типови података<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>У програмирању разликујемо три основне врсте података: нумеричке
+(бројевe различитих типова, нпр. <code class="docutils literal notranslate"><span class="pre">-3</span></code> или <code class="docutils literal notranslate"><span class="pre">4.17</span></code>), “стрингове”
+(текстуалне или знаковне податке, нпр. <code class="docutils literal notranslate"><span class="pre">&quot;Пајтон&quot;</span></code> или <code class="docutils literal notranslate"><span class="pre">&quot;###&quot;</span></code>) и
+“булеане” (логичке податке: тачно или нетачно, тј. <code class="docutils literal notranslate"><span class="pre">True</span></code> или
+<code class="docutils literal notranslate"><span class="pre">False</span></code>). У Пајтону постоји финија подела на типове податка, нпр. на
+целе бројеве (<em>integer</em>), децималне бројеве (<em>float</em>), стрингове
+(<em>string</em>) или листе (<em>list</em>). Свака употреба података подразумева да
+подаци одговарају намени. Уколико то није случај, програм ће при
+извршењу пријавити грешку. Не можемо, на пример, да тражимо елемент низа
+са редним бројем 2.17 или да израчунамо корен из стринга “девет”. Свако
+програмирање подразумава да неким променљивим вредностима доделимо
+вредности. Пајтон нас неће терати да унапред кажемо ког је типа
+променљива већ ће покушати сам да је препозна. Свеједно, морамо да
+водимо рачуна о типу података са којима радимо и да будемо доследни.</p>
+<div class="section" id="id3">
+<h3>Нумерички подаци<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Пајтон познаје три типа нумеричких, односно бројчаних података:
+целобројне вредности (<em>integer</em>), децималне бројеве (<em>float</em>) и
+комплексне бројеве (<em>complex</em>). Овим последњим типом се свакако нећемо
+бавити у основној школи. Ког је типа променљива, увек можемо да
+проверимо помоћу функције <code class="docutils literal notranslate"><span class="pre">type()</span></code>.</p>
+
+<div data-childcomponent="tip_int" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=tip_int data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+i=10
+print(type(i))
+</textarea>
+</div>
+<p>Број 10 је свакако цео број, али такође припада и скупу рационалних и
+реалних бројева. Разлог због ког је Пајтон тип ове променљиве препознао
+баш као <code class="docutils literal notranslate"><span class="pre">int</span></code> је то што бира најекономичнију варијанту. Број 10 ће
+имати најмањи запис и трошити најмање меморије ако га чувамо као
+“интиџер”. Уколико број има децимални запис (макар иза децималне тачке
+стајала и нула) тип тог податка ће бити препознат као <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
+
+<div data-childcomponent="float_tip" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=float_tip data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+f=10.0
+print(type(f))
+</textarea>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Знаковни подаци<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Знаковне податке обично називамо стринговима или нискама. Одатле ознака
+типа <code class="docutils literal notranslate"><span class="pre">str</span></code>. То су низови алфа-нумеричких карактера записани као текст.
+Када променљивој додељујемо вредност која је низ знакова, онда тај
+садржај стављамо под једноструке или двоструке знаке навода. Битно је да
+на почетку и на крају буде иста врста наводника.</p>
+
+<div data-childcomponent="tip_string" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=tip_string data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+s='Programiranje u Pajtonu'
+print(type(s))
+</textarea>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Логичке вредности<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Тип променљиве која садржи вредност логичког исказа називамо булеан
+(<em>boolean</em>). Булеани имају своје вредности које могу да буду или тачно
+(<em>True</em>) или нетачно (<em>False</em>). Свако поређење вредности променљивих
+(било ког типа) помоћу оператора једнако (<code class="docutils literal notranslate"><span class="pre">==</span></code>), није једнако
+(<code class="docutils literal notranslate"><span class="pre">!=</span></code>), мање (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>), мање или једнако (<code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>), веће (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>) и веће
+или једнако (<code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>) резултује логичком вредношћу.</p>
+
+<div data-childcomponent="poredjenje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=poredjenje data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+provera = 5==5.0
+print(provera)
+</textarea>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Замените у претходном пољу оператор <code class="docutils literal notranslate"><span class="pre">==</span></code> неким другим логичким оператором. Шта се догађа? У којим је све случајевима резултат <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+
+    </div></div>
+
+<div data-childcomponent="print_tip_bool" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=print_tip_bool data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(type(5==5.0))
+</textarea>
+</div>
+<p>Операције за рад са логичким вредностима су логичко и (<code class="docutils literal notranslate"><span class="pre">and</span></code> или
+<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>), логичко или (<code class="docutils literal notranslate"><span class="pre">or</span></code> или <code class="docutils literal notranslate"><span class="pre">|</span></code>) и не (<code class="docutils literal notranslate"><span class="pre">not</span></code>). Резултати ових
+логичких операција су такође логичке вредности.</p>
+
+<div data-childcomponent="bool_provera" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=bool_provera data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+provera = (5==5) and (5!=6)
+print(provera)
+</textarea>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Претварање променљивих у други тип податка<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>У неким случајевима, тип податка је могуће претворити у други. На пример
+стринг “2.75” лако може да се претвори у децимални број 2.75 уз помоћ
+функције <code class="docutils literal notranslate"><span class="pre">float()</span></code>. Обрнуто такође важи. Сада користимо функцију
+<code class="docutils literal notranslate"><span class="pre">str()</span></code>.</p>
+
+<div data-childcomponent="str_to_float" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=str_to_float data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = '2.75'
+b = float(a)
+print(type(b))
+print(b)
+</textarea>
+</div>
+
+<div data-childcomponent="float_to_str" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=float_to_str data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 1/7
+b = str(a)
+print(type(b))
+print(b)
+</textarea>
+</div>
+<p>Претварање интиџера у децимални број је једнозначно, само се промени
+формат, а вредност остаје иста. У супротном смеру морамо да претворимо
+број на целобројну вредност, тј. занемаримо цифре иза децималне тачке
+због чега се вредност променљиве унеколико мења.</p>
+
+<div data-childcomponent="float_int" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=float_int data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 3
+b = float(a)
+print(type(b))
+print(b)
+</textarea>
+</div>
+
+<div data-childcomponent="float_to_int" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=float_to_int data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 3.333
+b = int(a)
+print(type(b))
+print(b)
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Колекције<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Пајтон различите врсте скупова података назива колекцијама. Постоје четири основне колекције које имамо на располагању чим покренемо Пајтон. То су <strong>листе</strong> <strong>речници</strong>, <strong>торке</strong> и <strong>скупови</strong>. Ове године ћемо радити само са листама. (За детаљнији увод у листе можете да погледајте лекцију из <a class="reference external" href="https://petlja.org/kurs/368/14/2605">приручника за шести разред</a>.)</p>
+
+    </div></div>
+<div class="section" id="list">
+<h3>Листе (<code class="docutils literal notranslate"><span class="pre">list</span></code>)<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<p>Листу правимо тако што унутар угластих заграда наводимо различите
+податке раздвајајући их зарезом. Елементи листе могу бити подаци свих
+типова па чак и саме листе. Подаци могу да се понављају. Важна
+карактеристика листа је да су елементи нумерисани. Сваки елемент има
+свој индекс који почиње од нуле. Елементи из листе се позивају преко
+имена листе и индекса у угластим заградама.</p>
+
+<div data-childcomponent="lista_1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista_1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[2,3,'četiri']
+print(lista[2])
+</textarea>
+</div>
+</div>
+<div class="section" id="range">
+<h3>Функција <code class="docutils literal notranslate"><span class="pre">range()</span></code><a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h3>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">range(n)</span></code> враћа низ бројева од 0 до n-1 у формату који
+заправо не одговара ни једној од четири поменуте колекције, али је
+погодан за прављење петљи. Понекад и за излаз функције <code class="docutils literal notranslate"><span class="pre">range()</span></code> са
+конкретним аргументом кажемо да је колекција. У општем случају, синтакса
+ове функције је <code class="docutils literal notranslate"><span class="pre">range(&lt;старт&gt;,</span> <span class="pre">&lt;крај&gt;,</span> <span class="pre">&lt;корак&gt;)</span></code> где појединачни
+аргументи означавају прву вредност, вредност на којој се низ зауставља и
+корак са којим вредности мењају.</p>
+
+<div data-childcomponent="lista_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista_2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+а = len(range(0,30,5))
+print(а)
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Петље<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Када део програма треба да поновимо више пута, пожељно је да тај кôд
+ставимо у петљу. Петља је програмска структура која нам омогућава да
+контролошемо колико ће се пута блок инструкција извршавати. Свако
+извршавање кôда у петљи назива се <strong>итерација</strong>. Променљива која броји
+колико пута је блок инструкција извршен назива се <strong>итератор</strong> или
+<strong>бројач</strong>.</p>
+<p>Најчешће коришћена петља у Пајтону је <em>for</em> петља. Ова петља почиње
+инструкцијом <code class="docutils literal notranslate"><span class="pre">for</span></code>, иза ког иде услов да се бројач (итератор) налази у
+колекцији која следи. Оператор <code class="docutils literal notranslate"><span class="pre">in</span></code> између бројача и колекције
+означава услов да вредност бројача припада том скупу вредности. Прва
+линија петље завршава се знаком две тачке <code class="docutils literal notranslate"><span class="pre">:</span></code>. Следи блок инструкција
+који при писању мора да буде увучен.</p>
+<p>Петља у наредној ћелији користи излаз функције <code class="docutils literal notranslate"><span class="pre">range(10)</span></code> као
+колекцију. Ово је пример једноставног програма који исписује бројеве од
+0 до 9.</p>
+
+<div data-childcomponent="petlja_osnovna" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=petlja_osnovna data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+for i in range(10):
+    print(i)
+</textarea>
+</div>
+<p>Скуп вредности које узима променљива током итерирања овде је био
+дефинисан са <code class="docutils literal notranslate"><span class="pre">range(10)</span></code>, што је распон бројева од 0 до 9. Како у
+Пајтону индексирање увек почиње од нуле, вредности ове “итерабле” иду од
+0 до 9. Реч <strong>итерабла</strong> се односи на све колекције кроз које Пајтон
+може да пролази секвенцијално, односно тачно утврђеним редоследом од
+прве до последње вредности. Листе су такође итерабле па и њих можемо да
+користимо за конструисање петљи. Када итерирамо по колекцији типа
+<em>range</em>, итератори су бројеви. Ако користимо листу као итераблу, онда су
+вредности итератора вредности из листе које редом узимамо.</p>
+
+<div data-childcomponent="petlja_lista" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=petlja_lista data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+for s in ['први','други','трећи']:
+    print(s)
+</textarea>
+</div>
+<p>Итерабле такође могу да буду и скупови, стрингови, торке итд. Стринг
+није ништа друго до листа карактера. Зато можемо да итерирамо кроз
+стринг, односно да правимо петљу у којој ће итератор узимати вредности
+из стринга. Ево једноставног примера:</p>
+
+<div data-childcomponent="petlja_string" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=petlja_string data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+for c in "Python":
+    print(c)
+</textarea>
+</div>
+<p>Осим <em>for</em> петље, Пајтон има и <em>while</em> петљу. Код ње није битно да
+итератор буде у одређеном скупу. <em>while</em> петља се извршава док год је
+припадајући услов испуњен, односно док је логички исказ тачан. Ево
+примера како пример са <em>for</em> петљом можемо да напишемо користећи
+инструкцију <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
+
+<div data-childcomponent="petlja_while" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=petlja_while data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+i=0
+while i<10:
+    print(i)
+    i+=1
+</textarea>
+</div>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Приметите да овде “ручно” морамо да мењамо вредност индекса <code class="docutils literal notranslate"><span class="pre">i</span></code>. Израз
+<code class="docutils literal notranslate"><span class="pre">i+=1</span></code> је скраћени запис од <code class="docutils literal notranslate"><span class="pre">i=i+1</span></code>. То значи да у свакој итерацији
+вредност индекса <code class="docutils literal notranslate"><span class="pre">i</span></code> повећавамо за 1.</p>
+
+    </div></div>
+<div class="section" id="id9">
+<h3>Угњеждене петље<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Унутар једне петље лако можете да ставите другу. Пазите само да
+итератори имају различита имена. Типичан пример проблема који можете да
+решите петљом у петљи је да направите табелу где рачунате резултате неке
+операције између свака два елемента низа. Конкретно, можемо да направимо
+таблицу множења. Потребно је само сваки елемент једног низа помножити са
+сваким елементом другог. Следи пример једноставног програма који то
+рачуна и исписује на екрану.</p>
+
+<div data-childcomponent="nested_1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nested_1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+n=5
+for i in range(1,n+1):
+    for j in range (1,n+1):
+        print(i*j,end="\t")
+    print("\n")
+</textarea>
+</div>
+<p>Ако занемарите мало чудан начин исписа, програм је крајње једноставан.
+Узимамо све бројеве од 1 до 5, множимо сваки са сваким и приказујемо то
+на екрану. Оно што је необично код исписа је што смо ставили да се испис
+завршава “табом”, а не новим редом. То нам омогућава да испишемо 5
+резултата у једном реду. Ред завршавамо тек када унутрашња петља стигне
+до краја. Контролни знак за таб је “\t”, а за нови ред “\n”.</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Условно гранање<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>Да би програм могао да одлучи који део кôда треба да изврши потребно је
+да провери испуњеност траженог критеријума, односно да евалуира
+(вреднује) одговарајући логички исказ. У зависности од тога да ли је
+услов испуњен или не, програм ће извршавати различите делове кôда. У
+Пајтону се најчешће користи <em>if-then-else</em> конструкција. Прво
+проверавамо да ли је испуњен услов наведен иза <em>if</em>, ако јесте онда
+програм извршава оно што иде после <em>then</em>, а ако није испуњен извршава
+оно што следи после <em>else</em>. Погледајте пример.</p>
+
+<div data-childcomponent="uslovi" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=uslovi data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+a=int(input())
+if a%2==0:
+    print('паран')
+else:
+    print('непаран')
+</textarea>
+</div>
+<p>У овом примеру прво тражимо да неко помоћу тастатуре укуца број, онда
+тај унос претворимо у интиџер и придружимо га промељивој <code class="docutils literal notranslate"><span class="pre">a</span></code>. У
+следећој линији проверавамо да ли је тај број дељив са 2, односно да ли
+је остатак при дељењу са 2 једнак нули. Потом, као увучени блок
+инструкција, иде оно што треба извршти ако је услов испуњен, тј. да
+програм испише да је унети број паран. У противном, програм извршава
+следећи увучени блок инструкција и исписује да је број непаран.</p>
+<p>Обратите пажњу на синтаксу. У Пајтону се инструкција <em>then</em> уопште не
+користи. Уместо тога користе се знак <code class="docutils literal notranslate"><span class="pre">:</span></code> и увучени блокови
+инструкција. Видите како се после реда који се завршава са <code class="docutils literal notranslate"><span class="pre">:</span></code>
+појављује увучени део кôда. Први блок инструкција (који може да има
+произвољно много линија кôда) извршава се ако је услов испуњен, а други
+блок (после <code class="docutils literal notranslate"><span class="pre">else:</span></code>) ако услов није испуњен.</p>
+<p>Уколико гранање на две могућности није довољно, можемо да уведемо и нове
+блокове помоћу <code class="docutils literal notranslate"><span class="pre">elif</span></code> инструкције. Нема ограничења колико ових услова
+може да буде. Када први услов није испуњен, онда можемо да испитамо да
+ли је неки други услов испуњен помоћу <code class="docutils literal notranslate"><span class="pre">elif</span></code>. Погледајте пример.</p>
+
+<div data-childcomponent="elif" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=elif data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+a=5
+b=6
+if a==b:
+    print("a i b su jednaki.")
+elif a<b:
+    print("a je manje od b.")
+else:
+    print("a je veće od b.")
+</textarea>
+</div>
+<p>Други начин да проверимо више услова јесте да у <em>if-then-else</em> блоковима
+уведемо нове услове и ново гранање. Ако то радите обратите пажњу да ти
+нови блокови морају да буду још једном увучени помоћу табулатора. Ако су
+они први били по 4 размака (1 “таб”), онда ови угњеждени морају да буду
+по 8 (2 “таба”). Едитор у коме радите обично води рачуна о увлачењу
+блокова, али није лоше да проверите да ли је све увучено како треба. За
+разлику од неких других програмских језика, Пајтон неће да ради и
+пријављује грешку ако блокови нису правилно увучени. Ево примера како
+смо претходни пример могли да урадимо са угњежденим условима.</p>
+
+<div data-childcomponent="else" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=else data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+a=6
+b=6
+if a<b:
+    print("a je manje od b.")
+else:
+    if a==b:
+        print("a i b su jednaki.")
+    else:
+        print("a je veće od b.")
+</textarea>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Функције<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>Пајтон има неке уграђене функције као што су <code class="docutils literal notranslate"><span class="pre">sum()</span></code> или <code class="docutils literal notranslate"><span class="pre">min()</span></code>,
+али за конкретну намену сами можемо да напишемо нову функцију. Функције
+се једноставно дефинишу: у првој линији пишемо
+<code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">&lt;име</span> <span class="pre">функције&gt;(&lt;име</span> <span class="pre">променљиве</span> <span class="pre">у</span> <span class="pre">коју</span> <span class="pre">се</span> <span class="pre">смешта</span> <span class="pre">аргумент&gt;):</span></code>,
+онда следи блок инструкција којима обрађујемо и рачунамо нешто са
+улазном променљивом и на крају, у последњој линији, пишемо
+<code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">&lt;име</span> <span class="pre">излазне</span> <span class="pre">променљиве&gt;</span></code>. Свака функција може да има више
+улазних променљивих, као што може да врати и више излазних.</p>
+<p>Први пример функције који ћемо овде приказати је рачунање производа свих
+вредности у листи. Оваква функција не постоји у стандардној Пајтоновој
+библиотеци. Зато је добро да знамо да је напишемо.</p>
+
+<div data-childcomponent="funkcije" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=funkcije data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+def proizvod(L):     # argument, odnosno lista koju prosleđujemo funkciji biće smeštena u promenljivu L
+    p=1              # početna vrednost proizvoda je 1
+    for x in L:      # za svaku vrednost iz liste
+        p=p*x        # tekuću vrednost proizvoda množimo tom vrednošću
+    return p         # funkcija vraća proizvod svih vrednosti u listi
+print(proizvod([1,2,3,4,5]))
+</textarea>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Задатак: Можете ли, по угледу на претходни пример, сами да напишете функцију <code class="docutils literal notranslate"><span class="pre">zbir()</span></code> која би сабрала све елементе листе?</p>
+
+    </div></div>
+
+<div data-childcomponent="zbir_test" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=zbir_test data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+          data-runortest="test1 test2 test3"     data-hidehistory=true
+       >
+# -*- acsection: general-init -*-
+# -*- acsection: main -*-
+def zbir(L):
+   # dopuni ovu fuknciju
+# Провера
+test1 = zbir([1, 2, 3, 4, 5])
+test2 = zbir([100, 200, 500])
+test3 = zbir([-1, 0, 0, 4, 5])
+# -*- acsection: after-main -*-
+print(test1, test2, test3)
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+    def testOne(self):
+        L = [1, 2, 3, 4, 5]; rez1 = sum(L)
+        L = [100, 200, 500]; rez2 = sum(L)
+        L = [-1, 0, 0, 4, 5]; rez3 = sum(L)
+        run_test = acMainSection(test1=test1,test2=test2,test3=test3)
+        self.assertEqual(run_test["test1"], rez1, "Вредност променљиве 'test1' треба да буде %s" % rez1)
+        self.assertEqual(run_test["test2"], rez2, "Вредност променљиве 'test2' треба да буде %s" % rez2)
+        self.assertEqual(run_test["test3"], rez3, "Вредност променљиве 'test3' треба да буде %s" % rez3)
+myTests().main()
+</textarea>
+</div>
+<p>Како бисте написали функцију чији је улаз листа, а излаз најмања
+вредност из те листе? Та функција треба да пронађе најмању вредност у
+листи и да је врати. Оваква функција већ постоји у Пајтону и зове се
+<code class="docutils literal notranslate"><span class="pre">min()</span></code>, али ћемо искористи прилику да напишемо своју верзију. Име ове
+нове функције ће бити <code class="docutils literal notranslate"><span class="pre">minimum()</span></code>. Ево једне могућности како то може
+да се напише.</p>
+
+<div data-childcomponent="min" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=min data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+def minimum(L):
+    m=L[0]            # za početak, najmanja vrednost će biti ona prva u listi
+    for x in L[1:]:   # iteracije kreću od druge vrednosti u listi i idu do kraja
+        if x<m:       # ako je tekuća vrednost iteratora x manja od m, tj. one koja je do sada bila najmanja
+            m=x       # onda neka novi minimum bude x
+    return m          # na kraju funkcija vraća vrednost m
+lista=[11,22,33,14,25,36,17,28,39,10,21,32]
+print(minimum(lista)) # u okviru funkcije print, pozivamo funkciju minimum u kojoj je argument promenljiva lista
+</textarea>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Библиотеке<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>Пајтон без додатних библиотека има само основне типове података,
+структуре и функције. У тој стандардној библиотеци нема структура у
+којима бисмо чували табеле, нема функција које би цртале графиконе или
+чак рачунале једноставне математичке функције. За све то је потребно да
+учитамо библиотеке, модуле из библиотека или њихове појединачне
+функције. Срећом, Пајтон има огроман број врло квалитетних библиотека до
+којих се лако долази.</p>
+<p>Библиотеке се састоје из модула који у себи садрже разне типове
+података, објекте, функције и методе за те објекте итд. Стандардна
+библиотека има неколико модула које не учитава аутоматски. То значи да
+су модули инсталирани, али да треба да их учитамо. Међу њима су модули
+који су нам често потребни као што су <code class="docutils literal notranslate"><span class="pre">math</span></code> (математичке функције),
+<code class="docutils literal notranslate"><span class="pre">random</span></code> (генерисање случајних бројева) или <code class="docutils literal notranslate"><span class="pre">statistics</span></code>
+(статистичке функције).</p>
+<p>Када увеземо целу библиотеку или модул помоћу инструкције <code class="docutils literal notranslate"><span class="pre">import</span></code>,
+можемо да користимо све њене функције и објекте само морамо да наведемо
+одакле су преузети. На пример, када учитамо библитеку <code class="docutils literal notranslate"><span class="pre">math</span></code>, добићемо
+и функције и константе које уз њу иду. Кад их позивамо прво куцамо име
+библиотеке са тачком на крају, тј. <code class="docutils literal notranslate"><span class="pre">math.</span></code> па онда име функције или
+константе.</p>
+
+<div data-childcomponent="import" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=import data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+import math           # uvozimo biblioteku math
+print(math.pi)        # ispisujemo konstantu pi
+print(math.sqrt(81))  # ispisujemo kvadratni koren iz 81
+</textarea>
+</div>
+<p>Има библиотека које имају непрактично дуга имена па би било тешко стално
+укуцавати њихова имена кад хоћемо да позивамо њихове функције. У тим
+случајевима већ при учитавању библиотеке кажемо Пајтону да ћемо је
+убудуће позивати по “надимку”, тј. скраћеној верзији имена коју можемо
+сами да смислимо. У следећој ћелији је пример како увозимо библиотеку
+<code class="docutils literal notranslate"><span class="pre">matploylib.pyplot</span></code> одређујући да ћемо је убудуће звати само <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">Line2D</span> <span class="n">at</span> <span class="mh">0x1bdb561ab80</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<img alt="../_images/output_73_1.png" src="../_images/output_73_1.png" />
+<p>Ако нас интересује само једна функција из библиотеке, можемо њу посебно
+да учитамо помоћу линије
+<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">&lt;назив</span> <span class="pre">библиотеке&gt;</span> <span class="pre">import</span> <span class="pre">&lt;назив</span> <span class="pre">функције&gt;</span></code>. Тада при употреби
+не морамо да наводимо из које је библиотеке. На пример, ако из целог
+модула <code class="docutils literal notranslate"><span class="pre">statistics</span></code> хоћемо само функцију <code class="docutils literal notranslate"><span class="pre">mean()</span></code> која рачуна средњу
+вредност низа, то можемо да урадимо на следећи начин:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">mean</span>
+<span class="n">mean</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">4.25</span>
+</pre></div>
+</div>
+<p>Многе важне екстерене библиотеке су већ инсталиране у Џупитер окружењу.
+Оне које се најчешће користе су <code class="docutils literal notranslate"><span class="pre">pandas</span></code> за рад са табелама и
+фајловима, <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> за цртање графикона и <code class="docutils literal notranslate"><span class="pre">numpy</span></code> за рад
+са вишедимензионалним подацима. Уколико тражене библиотеке нема у
+окружењу, потребно је да је инсталирате. У већини случајева нема потребе
+да библиотеку тражите на интернету и да је преузимате. Довољно је да
+укуцате <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;назив</span> <span class="pre">библиотеке&gt;</span></code> и Пајтон ће библиотеку сам
+пронаћи, преузети и инсталирати.</p>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

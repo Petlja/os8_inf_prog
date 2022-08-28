@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Основе обраде и приказа табеларних података</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'Osmi_programiranje';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'Osmi_programiranje';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Анализа и презентација података у Џупитеру</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Jupyter>
+                    <h5>Пре него што почнеш</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Jupyter/howto.html><div class="studioLecture" id=activity-howto><i class="fas fa-file-alt activity-icon"></i>Како да користиш приручник</div></a>
+                <a href=../01_Jupyter/J0A.html><div class="studioLecture" id=activity-J0A><i class="fas fa-file-alt activity-icon"></i>Покретање Џупитер (*Jupyter*) радних свески</div></a>
+                <a href=../01_Jupyter/J01.html><div class="studioLecture" id=activity-J01><i class="fas fa-file-alt activity-icon"></i>Увод у Џупитер (*Jupyter*)</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_elementi_programiranja>
+                    <h5>Елементи програмирања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_elementi_programiranja/elementi_programiranja.html><div class="studioLecture" id=activity-elementi_programiranja><i class="fas fa-file-alt activity-icon"></i>Елементи програмирања у Пајтону</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_nizovi>
+                    <h5>Рад са низовима података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_nizovi/nizovi.html><div class="studioLecture" id=activity-nizovi><i class="fas fa-file-alt activity-icon"></i>Рад са низовима података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_graficko>
+                    <h5>Графичко представљање података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_graficko/graficko.html><div class="studioLecture" id=activity-graficko><i class="fas fa-file-alt activity-icon"></i>Графичко представљање података</div></a>
+                <a href=../04_graficko/graficko2.html><div class="studioLecture" id=activity-graficko2><i class="fas fa-file-alt activity-icon"></i>Линијски, тачкасти и стубични дијаграми</div></a>
+                <a href=../04_graficko/hist.html><div class="studioLecture" id=activity-hist><i class="fas fa-file-alt activity-icon"></i>Хистограм</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_tabele>
+                    <h5>Рад са табелама помоћу библиотеке Pandas</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_tabele/tabele_pandas.html><div class="studioLecture" id=activity-tabele_pandas><i class="fas fa-file-alt activity-icon"></i>Представљање табеларно задатих података помоћу листи</div></a>
+                <a href=../05_tabele/data_frame.html><div class="studioLecture" id=activity-data_frame><i class="fas fa-file-alt activity-icon"></i>Библиотека pandas и структура података DataFrame</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_obrada_i_prikaz>
+                    <h5>Основе обраде и приказа табеларних података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_obrada_i_prikaz/obrada.html><div class="studioLecture" id=activity-obrada><i class="fas fa-file-alt activity-icon"></i>Обрада табеларних података</div></a>
+                <a href=../06_obrada_i_prikaz/prikaz.html><div class="studioLecture" id=activity-prikaz><i class="fas fa-file-alt activity-icon"></i>Статистички и графички приказ табеларних података</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Основе обраде и приказа табеларних података<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Обраду, анализу и графички приказ података је тешко раздвојити. Све то
+углавном иде паралелно. У Пајтону постоји неколико најчешће коришћених
+библиотека које су усаглашене тако да објекти које користимо за обраду
+података имају функције за цртање, а функције за цртање враћају табеле и
+серије. Зато је то овде једна лекција.</p>
+<div class="section" id="id2">
+<h2>Обрада табеларних података<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Много тога за шта су нам потребни програмерско знање и труд при обради
+података у листама постаје једноставна примена готових функција када
+податке спакујемо у <em>DataFrame</em>. На тај начин нам библиотека <em>pandas</em>
+омогућава да рад са табелама буде једноставан, брз и ефикасан.</p>
+<div class="section" id="id3">
+<h3>Учитавање табеле из датотеке<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Податке најчешће чувамо у табелама. Чак су и базе података само
+колекције различитих табела. За поновну употребу табеле снимамо у
+датотеке (или фајлове, како их понекад зовемо). Те снимљене табеле
+касније учитавамо по потреби. Уобичајени формат датотека за снимање
+табела је CSV (енгл. <em>comma separated value</em>, тј. вредности одвојене
+зарезом). Библиотека <em>pandas</em> има функције за учитавање и снимање
+табела. За учитавање користимо функцију <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>. Aргумент ове
+функције је стринг са локацијом и називом датотеке, нпр.
+“data/preostala-mesta-skole.csv”.</p>
+<p>Ова датотека се не налази у Пајтоновом радном директоријуму већ у
+поддиректоријуму <em>data</em>, због чега је потребно да то напишемо и да назив
+директоријума и датотеке раздвојимо косом цртом. Учитаћемо сада баш ту
+датотеку. У њој се налази листа средњих школа у Србији где је наведено
+колико је било слободних места за упис после првог круга уписа 2022.
+године.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>                <span class="c1"># prvo uvozimo pandas biblioteku</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>    <span class="c1"># i biblioteku za crtanje grafika</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/preostala-mesta-skole.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>При позивању функција из одређене библиотеке потребно је да наведемо
+ознаке библиотека. Зато није довољно да напишемо <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> већ
+морамо <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>. При увожењу библиотека ми смо нагласили да
+ћемо користити скраћена имена уместо пуних. Користићемо <code class="docutils literal notranslate"><span class="pre">pd</span></code> уместо
+<code class="docutils literal notranslate"><span class="pre">pandas</span></code> и <code class="docutils literal notranslate"><span class="pre">plt</span></code> уместо <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> што ће нам олакшати
+писање кôда.</p>
+<p>Садржај датотеке смо учитали и сместили у табелу (тачније променљиву
+типа <em>dataframe</em>) <code class="docutils literal notranslate"><span class="pre">dt</span></code>. Да бисмо видели шта је учитано, згодно је да
+прикажемо на екрану заглавље те табеле са првих неколико редова. За то
+нам служи функција <code class="docutils literal notranslate"><span class="pre">.head()</span></code>.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Општина</th>
+      <th>Школа</th>
+      <th>Мин. бодова</th>
+      <th>Укупно места</th>
+      <th>Преостало места</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Ада</td>
+      <td>Техничка школа, Ада</td>
+      <td>39.37</td>
+      <td>150</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Александровац</td>
+      <td>Средња школа "Свети Трифун" са домом ученика, ...</td>
+      <td>42.77</td>
+      <td>90</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Алексинац</td>
+      <td>Алексиначка гимназија, Алексинац</td>
+      <td>63.19</td>
+      <td>90</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Алексинац</td>
+      <td>Биотехнолошка школа "Шуматовац", Алексинац</td>
+      <td>40.76</td>
+      <td>60</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Алексинац</td>
+      <td>Техничка школа "Прота Стеван Димитријевић", Ал...</td>
+      <td>50.16</td>
+      <td>30</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div><p>Видимо да су у табели називи школа дати по врстама, а да по колонама
+имамо основне податке о упису у тим државама. У колони <strong>Општина</strong> је
+име општине у којој се налази школа, <strong>Школа</strong> означава назив школе са
+именом места, <strong>Мин. бодова</strong> представља најмањи број бодова са којим се
+у тој школи у првом кругу неко уписао, <strong>Укупно места</strong> означава број
+одобрених места, а <strong>Преостало места</strong> је број непопуњених места у тој
+школи. Називе свих колона можемо да добијемо помоћу <code class="docutils literal notranslate"><span class="pre">dt.columns</span></code>.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Index</span><span class="p">([</span><span class="s1">&#39;Општина&#39;</span><span class="p">,</span> <span class="s1">&#39;Школа&#39;</span><span class="p">,</span> <span class="s1">&#39;Мин. бодова&#39;</span><span class="p">,</span> <span class="s1">&#39;Укупно места&#39;</span><span class="p">,</span> <span class="s1">&#39;Преостало места&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Вредности које се налазе у одређеној колони се позивају тако што после
+имена табеле у угластим заграда наведемо име колоне под једноструким или
+двоструким наводницима. Да бисмо приказали колону са именима држава,
+написаћемо <code class="docutils literal notranslate"><span class="pre">dt['Школа']</span></code> или <code class="docutils literal notranslate"><span class="pre">dt[&quot;Школа&quot;]</span></code>.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Школа&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>                                    <span class="n">Техничка</span> <span class="n">школа</span><span class="p">,</span> <span class="n">Ада</span>
+<span class="mi">1</span>      <span class="n">Средња</span> <span class="n">школа</span> <span class="s2">&quot;Свети Трифун&quot;</span> <span class="n">са</span> <span class="n">домом</span> <span class="n">ученика</span><span class="p">,</span> <span class="o">...</span>
+<span class="mi">2</span>                       <span class="n">Алексиначка</span> <span class="n">гимназија</span><span class="p">,</span> <span class="n">Алексинац</span>
+<span class="mi">3</span>             <span class="n">Биотехнолошка</span> <span class="n">школа</span> <span class="s2">&quot;Шуматовац&quot;</span><span class="p">,</span> <span class="n">Алексинац</span>
+<span class="mi">4</span>      <span class="n">Техничка</span> <span class="n">школа</span> <span class="s2">&quot;Прота Стеван Димитријевић&quot;</span><span class="p">,</span> <span class="n">Ал</span><span class="o">...</span>
+                             <span class="o">...</span>
+<span class="mi">338</span>                               <span class="n">Техничка</span> <span class="n">школа</span> <span class="p">,</span> <span class="n">Шабац</span>
+<span class="mi">339</span>                             <span class="n">Шабачка</span> <span class="n">гимназија</span><span class="p">,</span> <span class="n">Шабац</span>
+<span class="mi">340</span>                      <span class="n">Гимназија</span> <span class="s2">&quot;Сава Шумановић&quot;</span><span class="p">,</span> <span class="n">Шид</span>
+<span class="mi">341</span>                   <span class="n">Техничка</span> <span class="n">школа</span> <span class="s2">&quot;Никола Тесла&quot;</span><span class="p">,</span> <span class="n">Шид</span>
+<span class="mi">342</span>    <span class="n">Економско</span><span class="o">-</span><span class="n">трговинска</span> <span class="n">школа</span> <span class="s2">&quot;Јован Цвијић&quot;</span><span class="p">,</span> <span class="n">Штрпце</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Школа</span><span class="p">,</span> <span class="n">Length</span><span class="p">:</span> <span class="mi">343</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+</pre></div>
+</div>
+<p>Ако хоћете да видите само део ове листе, користите слајсове. Са
+<code class="docutils literal notranslate"><span class="pre">[:10]</span></code> ћете нпр. добити првих 10, а са <code class="docutils literal notranslate"><span class="pre">[10:20]</span></code> других 10
+елемената колоне, а са <code class="docutils literal notranslate"><span class="pre">[10:0:-1]</span></code> првих десет у обрнутом редоследу.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Школа&#39;</span><span class="p">][</span><span class="mi">10</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>                  <span class="n">Средња</span> <span class="n">школа</span> <span class="s2">&quot;Свети Ахилије&quot;</span><span class="p">,</span> <span class="n">Ариље</span>
+<span class="mi">11</span>    <span class="n">Средња</span> <span class="n">школа</span> <span class="s2">&quot;Вук Караџић&quot;</span> <span class="n">са</span> <span class="n">домом</span> <span class="n">ученика</span><span class="p">,</span> <span class="n">Б</span><span class="o">...</span>
+<span class="mi">12</span>                        <span class="n">Техничка</span> <span class="n">школа</span> <span class="p">,</span> <span class="n">Бајина</span> <span class="n">Башта</span>
+<span class="mi">13</span>                               <span class="n">Средња</span> <span class="n">школа</span><span class="p">,</span> <span class="n">Барајево</span>
+<span class="mi">14</span>                <span class="n">Средња</span> <span class="n">школа</span> <span class="s2">&quot;Никола Тесла&quot;</span><span class="p">,</span> <span class="n">Баточина</span>
+<span class="mi">15</span>                             <span class="n">Пољопривредна</span> <span class="n">школа</span><span class="p">,</span> <span class="n">Бач</span>
+<span class="mi">16</span>               <span class="n">Гимназија</span> <span class="s2">&quot;20. октобар&quot;</span><span class="p">,</span> <span class="n">Бачка</span> <span class="n">Паланка</span>
+<span class="mi">17</span>    <span class="n">Средња</span> <span class="n">стручна</span> <span class="n">школа</span> <span class="s2">&quot;Др Радивој Увалић&quot;</span><span class="p">,</span> <span class="n">Бачк</span><span class="o">...</span>
+<span class="mi">18</span>               <span class="n">Техничка</span> <span class="n">школа</span> <span class="s2">&quot;9. мај&quot;</span><span class="p">,</span> <span class="n">Бачка</span> <span class="n">Паланка</span>
+<span class="mi">19</span>    <span class="n">Гимназија</span> <span class="n">и</span> <span class="n">економска</span> <span class="n">школа</span> <span class="s2">&quot;Доситеј Обрадовић...</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Школа</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Сортирање<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Библиотека <em>pandas</em> има прегршт корисних функција за рад са табелама и
+њиховим колонама. Функција <code class="docutils literal notranslate"><span class="pre">.sort_values()</span></code> сортира све вредности у
+одређеној колони и прерасподељује садржај осталих колона у складу са
+тим. Аргумент ове функције је назив колоне по којој хоћемо да сортирамо
+табелу. Подразумева се да се сортирање ради од најмање до највеће
+вредности. Уколико нам то не одговара и хоћемо сортирање у супротном
+смеру, потребно је да наведемо и други аргумент: <code class="docutils literal notranslate"><span class="pre">ascending=False</span></code>. То
+буквално значи да не сортира у растућем (енгл. <em>ascending</em>) редоследу.
+Примера ради, ако хоћемо да видимо у које су се школе ученици уписивали
+са најмањим и највећим бројем бодова, можемо да сортирамо вредности по
+тој колони и погледамо које се школе налази на почетку и крају табеле.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Мин. бодова&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Општина</th>
+      <th>Школа</th>
+      <th>Мин. бодова</th>
+      <th>Укупно места</th>
+      <th>Преостало места</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>244</th>
+      <td>Пријепоље</td>
+      <td>Техничка школа , Пријепоље</td>
+      <td>28.73</td>
+      <td>105</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>Вучитрн</td>
+      <td>Техничка школа "Никола Тесла" , Прилужје</td>
+      <td>30.16</td>
+      <td>60</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>272</th>
+      <td>Сјеница</td>
+      <td>Техничко - пољопривредна школа са домом ученик...</td>
+      <td>30.47</td>
+      <td>75</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>Лесковац</td>
+      <td>Школа за текстил и дизајн, Лесковац</td>
+      <td>31.71</td>
+      <td>90</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>Вршац</td>
+      <td>Школски центар "Никола Тесла", Вршац</td>
+      <td>33.39</td>
+      <td>30</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>228</th>
+      <td>Пећ</td>
+      <td>Економско-трговинска школа "Милева Вуковић", Г...</td>
+      <td>75.44</td>
+      <td>60</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>Зрењанин</td>
+      <td>Зрењанинска гимназија, Зрењанин</td>
+      <td>79.25</td>
+      <td>30</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>Земун</td>
+      <td>Школа за ученике оштећеног вида "Вељко Рамадан...</td>
+      <td>NaN</td>
+      <td>12</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>206</th>
+      <td>Нови Сад</td>
+      <td>Школа за основно и средње образовање "Милан Пе...</td>
+      <td>NaN</td>
+      <td>12</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>Савски венац</td>
+      <td>Школа за оштећене слухом-наглуве "Стефан Дечан...</td>
+      <td>NaN</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+<p>343 rows × 5 columns</p>
+</div><p><strong>Задатак 1</strong>: Сортирате табелу <code class="docutils literal notranslate"><span class="pre">dt</span></code> у по укупном броју места у
+школама од највеће до најмање вредности.</p>
+<p>Видимо да има школа где се ученици са тридесетак бодова успешно уписују,
+али да има и оних такав податак уопште није наведен. Ту се у табели
+појављује ознака <code class="docutils literal notranslate"><span class="pre">NaN</span></code>. Ако пажљивије погледамо табелу, видећемо да су
+школе за које немамо податак о минималном броју бодова школе за ученике
+са тешкоћама у развоју. То је вероватно разлог зашто број бодова није
+био критеријум по ком су ученици уписивани.</p>
+<p>Табеле са великим бројем редова нису прегледне чак ни када их сортирамо.
+Зато је пожељно да направимо графички приказ који би нам помогао у
+тумачењу података. Овде ћемо дати примере два типа дијаграма (стубичасти
+дијаграм и хистограм) за приказ колона са бројем становника и површином
+држава.</p>
+<p>Прво дајемо стубичасти дијаграм. Аргументи функције су ознаке стубића
+(име школе) и дужина стубића (минимални број бодова). Пошто школа у
+табели има преко 200, тешко је направити прегледан график са свим
+школама. Зато смо узели само првих двадесет школа са највећим бројем
+бодова последњег уписаног ученика.</p>
+<p>Због прегледности исписа згодније нам је да стубићи буду хоризонтални.
+Зато користимо функцију <code class="docutils literal notranslate"><span class="pre">barh()</span></code> уместо <code class="docutils literal notranslate"><span class="pre">bar()</span></code>. Пробајте и са
+<code class="docutils literal notranslate"><span class="pre">bar()</span></code> да видите како би изгледало.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spd</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Мин. бодова&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>   <span class="c1"># sortiramo tabelu po min. broju bodova i dodeljujemo je novoj tabeli</span>
+<span class="n">spd20</span><span class="o">=</span><span class="n">spd</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>                                       <span class="c1"># zbog preglednosti, pomoću slajsa, izdvajamo samo prvih 20 redova</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">spd20</span><span class="p">[</span><span class="s1">&#39;Школа&#39;</span><span class="p">],</span><span class="n">spd20</span><span class="p">[</span><span class="s1">&#39;Мин. бодова&#39;</span><span class="p">],)</span>       <span class="c1"># crtamo horizontalni stubičasti dijagram</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">BarContainer</span> <span class="nb">object</span> <span class="n">of</span> <span class="mi">20</span> <span class="n">artists</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../_images/output_25_1.png" src="../_images/output_25_1.png" />
+<p><strong>Задатак 2</strong>: Напишите кôд који исписује имена десет школа са најмањим
+бројем преосталих места.</p>
+<p>Други важан тип графикона за приказ расподеле података је хистограм. Он
+нам приказује колико се пута у одређеном низу појављује вредност из
+тачно одређених интервала вредности. На пример, хистограм може да нам
+прикаже број школа по интервалима вредности за број преосталих места.
+Функција <code class="docutils literal notranslate"><span class="pre">.hist()</span></code> дели интервал од најмање до највеће вредности на
+десет једнаких под-интервала уколико не наведемо конкретан број
+интервала као други аргумент функције и распон одакле докле желимо
+хистограм као трећи аргумент. Сада ћемо приказтаи само ову основну
+варијанту са једним аргуметном. Нешто касније ћете видети и како то
+изгледа са три.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Преостало места&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>                         <span class="c1"># crtanje mreže na grafiku</span>
+</pre></div>
+</div>
+<img alt="../_images/output_28_0.png" src="../_images/output_28_0.png" />
+</div>
+<div class="section" id="id5">
+<h3>Филтрирање табеле<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Филтрирање значи да од целе табеле желимо да издвојимо само оне редове
+који нас интересују. За филтрирање података у табели користимо
+критеријуме, односно логичке исказе као што је нпр.
+<code class="docutils literal notranslate"><span class="pre">dt['Општина']==&quot;Крагујевац&quot;</span></code>. Овде проверавамо које су вредности у
+колони <code class="docutils literal notranslate"><span class="pre">dt['Општина']</span></code> једнаке стрингу <code class="docutils literal notranslate"><span class="pre">&quot;Крагујевац&quot;</span></code>. У угласте
+заграде после назива табеле треба унети тражени критеријум. На тај начин
+од целе почетне табеле издвајамо само онај део табеле где је критеријум
+испуњен.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="p">[</span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Општина&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;Крагујевац&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Општина</th>
+      <th>Школа</th>
+      <th>Мин. бодова</th>
+      <th>Укупно места</th>
+      <th>Преостало места</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>130</th>
+      <td>Крагујевац</td>
+      <td>Прва техничка школа, Крагујевац</td>
+      <td>55.23</td>
+      <td>30</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>Крагујевац</td>
+      <td>Средња стручна школа, Крагујевац</td>
+      <td>41.35</td>
+      <td>150</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>Крагујевац</td>
+      <td>Трговинско-угоститељска школа "Тоза Драговић",...</td>
+      <td>42.16</td>
+      <td>180</td>
+      <td>89</td>
+    </tr>
+  </tbody>
+</table>
+</div><p>Слично можемо да издвојимо све школе у којима је остало више од стотину
+слободних места. Шта мислите колико их има?</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="p">[</span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Преостало места&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Општина</th>
+      <th>Школа</th>
+      <th>Мин. бодова</th>
+      <th>Укупно места</th>
+      <th>Преостало места</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>131</th>
+      <td>Крагујевац</td>
+      <td>Средња стручна школа, Крагујевац</td>
+      <td>41.35</td>
+      <td>150</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <th>200</th>
+      <td>Нови Сад</td>
+      <td>Пољопривредна школа са домом ученика "Футог", ...</td>
+      <td>43.94</td>
+      <td>180</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <th>213</th>
+      <td>Палилула (Београд)</td>
+      <td>Железничка техничка школа, Београд (Палилула)</td>
+      <td>50.27</td>
+      <td>210</td>
+      <td>111</td>
+    </tr>
+    <tr>
+      <th>310</th>
+      <td>Темерин</td>
+      <td>Средња школа "Лукијан Мушицки", Темерин</td>
+      <td>37.87</td>
+      <td>180</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <th>335</th>
+      <td>Чукарица</td>
+      <td>Хемијско-прехрамбена технолошка школа, Београд...</td>
+      <td>40.56</td>
+      <td>210</td>
+      <td>108</td>
+    </tr>
+  </tbody>
+</table>
+</div><p><strong>Задатак 3</strong>: Напишите кôд који издваја редове табеле <code class="docutils literal notranslate"><span class="pre">dt</span></code> где је
+број преосталих места мањи или једнак 5.</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Статистички и графички приказ табеларних података<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>У табели типа <em>dataframe</em> можемо да имамо различите типове података.
+Битно је само да су у једној колони сви подаци истог типа. Два
+најважнија типа података, заправо групе типова су номинални (или
+категоријални, како их понекад зовемо) и нумерички подаци. Номинални
+подаци означавају нека имена, називе или кратке текстуалне описе. Имена
+општина представљају номиналне податке. Већина номиналних података су
+стрингови који означавају различите објекте. Једина статистика коју
+можемо да радимо са номиналним подацима јесте да пребројимо колико их
+има, тј. да видимо колико се често појављују.</p>
+<p>У табели <code class="docutils literal notranslate"><span class="pre">dt</span></code> имамо колону са именом општине у којој се школа налази.
+Ако бисмо пребројали колико се пута појављују ови подаци, видели бисмо
+колико различитих школа имамо у којој општини. Библиотека <em>pandas</em> нам
+омогућава да то радимо помоћу функције <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code> коју
+применимо на одговарајућу колону.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vc</span><span class="o">=</span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Општина&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vc</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Нови</span> <span class="n">Сад</span>       <span class="mi">10</span>
+<span class="n">Лесковац</span>        <span class="mi">8</span>
+<span class="n">Суботица</span>        <span class="mi">7</span>
+<span class="n">Зрењанин</span>        <span class="mi">6</span>
+<span class="n">Панчево</span>         <span class="mi">6</span>
+               <span class="o">..</span>
+<span class="n">Кањижа</span>          <span class="mi">1</span>
+<span class="n">Ириг</span>            <span class="mi">1</span>
+<span class="n">Зубин</span> <span class="n">Поток</span>     <span class="mi">1</span>
+<span class="n">Звечан</span>          <span class="mi">1</span>
+<span class="n">Штрпце</span>          <span class="mi">1</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Општина</span><span class="p">,</span> <span class="n">Length</span><span class="p">:</span> <span class="mi">165</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</pre></div>
+</div>
+<p>Функција <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code> враћа податак типа <em>Series</em>, односно
+индексирани низ вредности који дефинише <em>pandas</em> библиотека. Индексима,
+односно називима појединачних елемената низа приступамо помоћу
+<code class="docutils literal notranslate"><span class="pre">&lt;име</span> <span class="pre">серије&gt;.index</span></code>, а вредностима елемената низа помоћу
+<code class="docutils literal notranslate"><span class="pre">&lt;име</span> <span class="pre">серије&gt;.values</span></code>. Конкретно, имена општина из серије <code class="docutils literal notranslate"><span class="pre">vc</span></code>
+позивамо са <code class="docutils literal notranslate"><span class="pre">vc.index</span></code>, док вредности које смо добили пребројавањем
+позивамо са <code class="docutils literal notranslate"><span class="pre">vc.values</span></code>.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vc</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Index</span><span class="p">([</span><span class="s1">&#39;Нови Сад&#39;</span><span class="p">,</span> <span class="s1">&#39;Лесковац&#39;</span><span class="p">,</span> <span class="s1">&#39;Суботица&#39;</span><span class="p">,</span> <span class="s1">&#39;Зрењанин&#39;</span><span class="p">,</span> <span class="s1">&#39;Панчево&#39;</span><span class="p">,</span> <span class="s1">&#39;Медијана&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Сомбор&#39;</span><span class="p">,</span> <span class="s1">&#39;Врање&#39;</span><span class="p">,</span> <span class="s1">&#39;Приштина&#39;</span><span class="p">,</span> <span class="s1">&#39;Крушевац&#39;</span><span class="p">,</span>
+       <span class="o">...</span>
+       <span class="s1">&#39;Костолац&#39;</span><span class="p">,</span> <span class="s1">&#39;Косјерић&#39;</span><span class="p">,</span> <span class="s1">&#39;Ковачица&#39;</span><span class="p">,</span> <span class="s1">&#39;Кнић&#39;</span><span class="p">,</span> <span class="s1">&#39;Кладово&#39;</span><span class="p">,</span> <span class="s1">&#39;Кањижа&#39;</span><span class="p">,</span> <span class="s1">&#39;Ириг&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Зубин Поток&#39;</span><span class="p">,</span> <span class="s1">&#39;Звечан&#39;</span><span class="p">,</span> <span class="s1">&#39;Штрпце&#39;</span><span class="p">],</span>
+      <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">165</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Задатак 4</strong>: Нацртајте стубичасти дијаграм који приказује број школа
+по општинама. Да би ознаке биле прегледне, узмите само неколико највећих
+вредности.</p>
+<p>За разлику од номиналних вредности, нумеричке могу да се пореде
+међусобно по величини. Са бројевима могу да се раде и рачунске
+операције. Због тога су могућности за обраду и анализу нумеричких низова
+много веће него за низове номиналних података. Наш основни задатак је да
+цео низ података што једноставније и разумљивије представимо. Низ
+података често поједностављено приказујемо помоћу карактеристичних
+вредности, као што је нпр. средња вредност. Други важан начин је да цео
+низ података прикажемо графички како бисмо податке могли да “видимо”.</p>
+<div class="section" id="id7">
+<h3>Описивање низова података преко карактеристичних вредности<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>За рачунање средње вредности се користи <em>pandas</em> функција <code class="docutils literal notranslate"><span class="pre">.mean()</span></code>
+која се примењује на нумеричку колону у табели. Користећи табелу
+израчунаћемо средњу вредност броја преосталих места по школама.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Преостало места&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">38.221574344023324</span>
+</pre></div>
+</div>
+<p>Средња вредност броја преосталих места је приближно 38. Друга
+статистичка мера којом често описујемо низ бројева је медијана. Њу
+рачунамо помоћу <em>pandas</em> функције <code class="docutils literal notranslate"><span class="pre">.median()</span></code>.</p>
+<blockquote>
+<div><p><strong>Медијана</strong> је математичка функција која нам даје средишњу вредност
+за низ који је сортиран по величини. Она дели низ на два дела са
+истим бројем елемената. Ако низ, на пример, садржи висине 101
+ученика, медијана нам даје висину 51. највишег ученика. Од њега има
+50 виших и 50 нижих, док је он у самој средини. Ако имамо паран број
+ученика, онда нема ученика који је баш у средини па се медијана
+рачуна мало другачије: као средња вредност висине првог елемента
+испод и првог изнад те средине. То значи да је медијана низа од 100
+бројева, средња вредност 50. и 51. највеће вредности овог низа.</p>
+</div></blockquote>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Преостало места&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">34.0</span>
+</pre></div>
+</div>
+<p>Уочите колика је разлика између средње вредности и медијане за број
+преосталих места. Средња вредност је углавном већа код свих низова
+података где има много малих и мало великих вредности.</p>
+<p>Погледајте хистограм броја преосталих места по школама. Највише је оних
+где има двадесетак слободних места које видимо као високе стубиће са
+леве стране, док је са десне стране мањи број школа са много слободних
+места. Не улазећи даље у тумачење података, хоћемо само да покажемо да
+се средња вредност и медијана разликују. На графикону доле, црвеном
+линијом је обележена медијана, а наранџастом средња вредност. Пробајте
+сами да откријете шта ради која линија у програму.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mArea</span><span class="o">=</span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Преостало места&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mdArea</span><span class="o">=</span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Преостало места&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Преостало места&#39;</span><span class="p">],</span><span class="mi">12</span><span class="p">,</span><span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">120</span><span class="p">))</span>   <span class="c1"># interval od 0 do 119 delimo na 12 podintervala</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">mArea</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">mdArea</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<img alt="../_images/output_51_0.png" src="../_images/output_51_0.png" />
+<p><strong>Задатак 5</strong>: Одредите средњу вредност и медијану за минимални број
+бодова по школама.</p>
+<p><strong>Задатак 6</strong>: Нацртајте хистограм минималног броја бодова по школама.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="#" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span>Претходна лекција</span> </a>
+  
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

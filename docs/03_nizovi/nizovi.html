@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рад са низовима података</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'Osmi_programiranje';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'Osmi_programiranje';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Анализа и презентација података у Џупитеру</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Jupyter>
+                    <h5>Пре него што почнеш</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Jupyter/howto.html><div class="studioLecture" id=activity-howto><i class="fas fa-file-alt activity-icon"></i>Како да користиш приручник</div></a>
+                <a href=../01_Jupyter/J0A.html><div class="studioLecture" id=activity-J0A><i class="fas fa-file-alt activity-icon"></i>Покретање Џупитер (*Jupyter*) радних свески</div></a>
+                <a href=../01_Jupyter/J01.html><div class="studioLecture" id=activity-J01><i class="fas fa-file-alt activity-icon"></i>Увод у Џупитер (*Jupyter*)</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_elementi_programiranja>
+                    <h5>Елементи програмирања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_elementi_programiranja/elementi_programiranja.html><div class="studioLecture" id=activity-elementi_programiranja><i class="fas fa-file-alt activity-icon"></i>Елементи програмирања у Пајтону</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_nizovi>
+                    <h5>Рад са низовима података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_nizovi/nizovi.html><div class="studioLecture" id=activity-nizovi><i class="fas fa-file-alt activity-icon"></i>Рад са низовима података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_graficko>
+                    <h5>Графичко представљање података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_graficko/graficko.html><div class="studioLecture" id=activity-graficko><i class="fas fa-file-alt activity-icon"></i>Графичко представљање података</div></a>
+                <a href=../04_graficko/graficko2.html><div class="studioLecture" id=activity-graficko2><i class="fas fa-file-alt activity-icon"></i>Линијски, тачкасти и стубични дијаграми</div></a>
+                <a href=../04_graficko/hist.html><div class="studioLecture" id=activity-hist><i class="fas fa-file-alt activity-icon"></i>Хистограм</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_tabele>
+                    <h5>Рад са табелама помоћу библиотеке Pandas</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_tabele/tabele_pandas.html><div class="studioLecture" id=activity-tabele_pandas><i class="fas fa-file-alt activity-icon"></i>Представљање табеларно задатих података помоћу листи</div></a>
+                <a href=../05_tabele/data_frame.html><div class="studioLecture" id=activity-data_frame><i class="fas fa-file-alt activity-icon"></i>Библиотека pandas и структура података DataFrame</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_obrada_i_prikaz>
+                    <h5>Основе обраде и приказа табеларних података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_obrada_i_prikaz/obrada.html><div class="studioLecture" id=activity-obrada><i class="fas fa-file-alt activity-icon"></i>Обрада табеларних података</div></a>
+                <a href=../06_obrada_i_prikaz/prikaz.html><div class="studioLecture" id=activity-prikaz><i class="fas fa-file-alt activity-icon"></i>Статистички и графички приказ табеларних података</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Рад са низовима података<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Када прикупљамо податке, то су увек неки низови. Некада су елементи тих
+низова једноставни бројчани подаци, на пример максимална дневна
+температура. Ако те податке прикупљамо сваки дан у јуну, имаћемо на
+крају низ од тридесет бројева. Са друге стране, подаци могу да буду
+веома сложени. Замислите прикупљање података о паду Римског царства. Ту
+елемент низа може да буде садржај целе једне књиге. Свеједно, подаци се
+прикупљају, бележе и чувају у различитим варијантама низова.</p>
+<p>У Пајтону низове података представљамо различитим колекцијама. Ипак, то
+најчешће радимо помоћу колекције типа <strong>листа</strong>. Колекција типа
+<strong>торке</strong> (енгл. <em>tuples</em>) су сличне листама. Оно што им је заједничко
+јесте да могу да се индексирају. То значи да елементима можемо да
+приступимо по редном броју, тј. да знамо који је елемент други, а који
+пети. Оно што је различито код листа и торки је да прве можемо да
+мењамо, односно да додајемо, бришемо и мењамо елементе. Још једна
+разлика између листа и торки је што прве набрајамо унутар угластих, а
+друге унутар обучних заграда. Торке су непроменљиве. У наставку ове
+свеске ћемо се бавити само листама, али вас то не спречава да исто ово
+пробате и са торкама.</p>
+<div class="section" id="id2">
+<h2>Рад са листама<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Листе су најопштије колекције података у којима може да буде података
+било ког типа. Због тога нема много конкретних и ефикасних функција за
+рад са листама. Тек када се подаци сложе у униформне низове или табеле,
+отвара се могућност за једноставну манипулацију података и статистичку
+анализу. Колико ефикасан може да буде тај рад видећете када будемо
+почели да користимо Пајтонове библиотеке. Ми ћемо се, за сад, бавити
+само оним скромним арсеналом операција и функција за рад са листама у
+општем случају.</p>
+<div class="section" id="id3">
+<h3>Управљање листом – индекси и слајсови<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Листе допуштају измене, допуне и брисање њених делова или појединачних
+елемената листе. Да бисмо могли да управљамо листом, потребно је да
+знамо како приступамо њеним деловима. За то користимо појединачне
+индексе и “слајсове”. Видећете на примерима како се они користе.</p>
+<p>Елементима листе можемо да приступимо по индексу тако што индекс (редни
+број елемента који креће од нуле) ставимо у угласте заграде после имена
+листе. Тако први елемент листе <code class="docutils literal notranslate"><span class="pre">L</span></code> добијамо са <code class="docutils literal notranslate"><span class="pre">L[0]</span></code>, други са
+<code class="docutils literal notranslate"><span class="pre">L[1]</span></code> итд. Исти елемент можемо да означимо са два индекса: једним
+који иде од почетка ка крају листе или по индексу који иде од краја ка
+почетку. У првом случају, индекс узима вредности од 0 до <em>n</em>-1, где је
+<em>n</em> дужина листе, док у другом има вредности од -1 (последњи елемент
+низа) до -<em>n</em> (први елемент).</p>
+
+<div data-childcomponent="lista1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+             data-passivecode="True"  data-hidehistory=true
+       >
+L=["I","II","III","IV","V","VI","VII","VIII","IX","X"]
+</textarea>
+</div>
+
+<div data-childcomponent="lista22" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista22 data-lang="python" 
+     data-include="lista1" data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(L[8]==L[-2])          # proveravamo da li su vrednosti elemenata sa indeksima 8 i -2 jednake
+</textarea>
+</div>
+<p>Слајс је део листе који дефинишемо задајући индекс почетка и индекс који
+је за један већи од индекса краја. Ова два броја стављамо унутар
+угластих заграда, а раздвајамо их помоћу две тачке, <code class="docutils literal notranslate"><span class="pre">:</span></code>. На пример, да
+елементе са индексима 2 и 3 издвајамо помоћу слајса <code class="docutils literal notranslate"><span class="pre">[2:4]</span></code>.</p>
+
+<div data-childcomponent="lista3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista3 data-lang="python" 
+     data-include="lista1" data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(L[2:4])
+</textarea>
+</div>
+<p>Уколико изоставимо неки број у слајсу, Пајтон подразумева да је то 0,
+ако је изостављен са леве стране, односно <em>n</em> ако је изостављен са
+десне. Тако све елементе од оног са индексом 2 па до краја листе можемо
+да издвојимо са <code class="docutils literal notranslate"><span class="pre">L[2:]</span></code>, док првих пет можемо да издвојимо са
+<code class="docutils literal notranslate"><span class="pre">L[:5]</span></code>. Ако изоставимо и леву и десну границу слајса, добићемо целу
+листу, од почетка до краја. Пробајте ове комбинације.</p>
+
+<div data-childcomponent="lista4" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista4 data-lang="python" 
+     data-include="lista1" data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(L[:5])
+</textarea>
+</div>
+<p>Слајсови могу да имају и трећи аргумент који задаје корак. На пример,
+ако хоћемо све елементе од индекса 3 до 7 тако што узимамо сваки други,
+то записујемо као слајс <code class="docutils literal notranslate"><span class="pre">[3:8:2]</span></code>.</p>
+
+<div data-childcomponent="lista5" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista5 data-lang="python" 
+     data-include="lista1" data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(L[3:8:2])
+</textarea>
+</div>
+<p>Корак у слајсу може да буде и негативан. Онда вредности из листе узима
+уназад. На пример, када хоћемо последњих пет у обрнутом редоследу, треба
+да напишемо <code class="docutils literal notranslate"><span class="pre">L[-1:-5:-1]</span></code>.</p>
+
+<div data-childcomponent="lista6" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista6 data-lang="python" 
+     data-include="lista1" data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(L[-1:-5:-1])
+</textarea>
+</div>
+<p>Можете ли да претпоставите шта ће нам дати <code class="docutils literal notranslate"><span class="pre">L[::-1]</span></code>? Овде смо
+пропустили да назначимо одакле докле узимамо елементе листе за слајс,
+само смо рекли да иде уназад. Јасно, слајс ће узети целу листу и обрнути
+редослед елемената.</p>
+
+<div data-childcomponent="lista7" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lista7 data-lang="python" 
+     data-include="lista1" data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+print(L[::-1])
+</textarea>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Операције са листама<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Код листа постоје операције сабирања и множења. Треба имати у виду да се
+ове операције односе на листе, а не на њихове вредности. Због тога
+операције можда неће радити оно што од њих очекујете. Погледајте
+примере.</p>
+
+<div data-childcomponent="operacije1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=operacije1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+a=[1,2,3]
+b=[3,4]
+
+print(a+b)
+print(a*3)
+</textarea>
+</div>
+<p>Операција сабирања спаја два листе. Множење листе и броја <em>m</em> прави нову
+листу у којој је прва листа поновљена <em>m</em> пута.</p>
+</div>
+<div class="section" id="id5">
+<h3>Основне функције за рад са листама<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Све функције, без обзира да ли су дефинисане у Пајтону или их ми пишемо,
+по правилу имају улазне и излазне променљиве. Променљиве које уносимо
+функција обрађује и враћа резултат, тј. вредност излазне променљиве.
+Функција се обично позива преко имена функције и аргумента у загради.
+Аргументе можемо да замислимо као паркинг места на која треба да ставимо
+називе неких променљивих. На пример, код функције која враћа дужину
+листе (<code class="docutils literal notranslate"><span class="pre">len()</span></code>) постоји један аргумент где ми ставимо име улазне
+променљиве, односно листе чију дужину желимо да сазнамо. Ако ставимо
+<code class="docutils literal notranslate"><span class="pre">len(L)</span></code> функција ће нам вратити дужину листе L.</p>
+<p>Пајтон има две врсте функција: оне где променљиве стављамо у заграде као
+аргументе, нпр. <code class="docutils literal notranslate"><span class="pre">sum(lista)</span></code>, и оне где се функције наводе у наставку
+после имена променљиве и тачке, нпр. <code class="docutils literal notranslate"><span class="pre">lista.sort()</span></code>. Ове друге се
+иначе називају методама. Разлика између ове две врсте функција за нас
+није посебно важна. Ми ћемо их, због једноставности, и једне и друге
+звати функцијама, само ћемо када помињемо ове друге стављати тачку
+испред имена функције.</p>
+<p>Функције <code class="docutils literal notranslate"><span class="pre">len()</span></code>, <code class="docutils literal notranslate"><span class="pre">min()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span></code> и <code class="docutils literal notranslate"><span class="pre">sum()</span></code> враћају дужину
+листе, минималну и максималну вредност, као и збир свих вредности у
+листи.</p>
+
+<div data-childcomponent="vrednosti" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=vrednosti data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+
+print('Dužina liste je', len(lista))
+print('Najmanja vrednost u listi je', min(lista))
+print('Najveća vrednost u listi je', max(lista))
+print('Zbir svih vrednosti u listi je', sum(lista))
+</textarea>
+</div>
+<p>Оних других функција за рад са листа чија се имена наводе после имена
+променљиве има нешто више. Не морате све да их знате, али је корисно да
+знате да постоје. Примери ови метода ће бити довољни да разумете шта
+раде.</p>
+<p><code class="docutils literal notranslate"><span class="pre">.append()</span></code> додаје још један елемент у листу. У следећем примеру листи
+додаје елемент са бројем 5.</p>
+
+<div data-childcomponent="dodavanje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dodavanje data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+lista.append(5)
+print(lista)
+</textarea>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.remove()</span></code> уклања први елемент који има наведену вредност.</p>
+
+<div data-childcomponent="oduzimanje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=oduzimanje data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+lista.remove(5)
+print(lista)
+</textarea>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.index()</span></code> даје индекс првог елемента у листи који има наведену
+вредност.</p>
+
+<div data-childcomponent="index" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=index data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+a = lista.index(2)
+print(a)
+</textarea>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.count()</span></code> прребројава колико се пута наведена вредност појављује у
+листи.</p>
+
+<div data-childcomponent="count" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=count data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+a = lista.count(4)
+print(a)
+</textarea>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.insert()</span></code> убацује у листу на место са одређеним индексом вредност
+која је наведена као други аргумент. Обратите пажњу да ова метода има
+два аргумента: први је индекс на који убацујемо нови елемент, а други
+вредност тог елемента.</p>
+
+<div data-childcomponent="inserts" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=inserts data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[]
+lista.insert(3,5)
+print(lista)
+</textarea>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.pop()</span></code> “вади” елемент са одређеним индексом из листе. Метод враћа
+вредност тог елемента при чему се елемент брише из листе.</p>
+
+<div data-childcomponent="pop" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pop data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+v=lista.pop(6)
+print('Izvadili smo iz liste prvi element sa vrednošću',v)
+print('Ostala je skraćena lista',lista)
+</textarea>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> обрће редослед елемената у листи. То је исто оно што смо
+раније добили помоћу <em>слајса</em> <code class="docutils literal notranslate"><span class="pre">[::-1]</span></code>.</p>
+
+<div data-childcomponent="reverse" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=reverse data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+lista.reverse()
+print(lista)
+</textarea>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.sort()</span></code> сортира вредности у листи по величини почевши од најмање.</p>
+
+<div data-childcomponent="sort" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=sort data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+lista.sort()
+print(lista)
+</textarea>
+</div>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Важно је да приметите како методе мењају листе на које се примењују.
+Примера ради, <code class="docutils literal notranslate"><span class="pre">lista.sort()</span></code> неће само вратити сортирану листу него ће
+ту листу трајно променити. Ово не можемо лако да вратимо назад јер не
+постоји “<em>.unsort</em>”. Ако нисмо запамтили претходно стање, не знамо у шта
+да га вратимо. Зато је понекад добро чувати копије оригиналних листа.</p>
+
+    </div></div>
+<p>Метода <code class="docutils literal notranslate"><span class="pre">.copy()</span></code> баш томе служи, копира једну листу у другу. Ако прву
+променимо, друга ће памтити старе вредности.</p>
+
+<div data-childcomponent="copy" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=copy data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[3,2,2,5,1,4,4]
+lista_original=lista.copy()
+lista.sort()
+print('Originalna lista',lista_original)
+print('Sortirana lista',lista)
+</textarea>
+</div>
+<p>На крају приче о функцијама, треба да знате да оне могу имати и више
+аргумената. То спада у неки напреднији курс. Ако сте заинтересовани,
+пробајте сами да откријете који су то аргументи и шта тако можете да
+добијете.</p>
+</div>
+<div class="section" id="id6">
+<h3>Корисничке функције за рад са листама<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>У овој свесци смо видели практично све функције за рад са листама које
+Пајтон има у својој стандардној библиотеци. За специфичније и
+конкретније намене можете сами да напишете као корисничку функцију. Све
+што можете да напишете у самом програму, можете и у функцији коју
+касније било кад можете да позовете.</p>
+<p>Улазне и излазне променљиве код функција могу да буду и листе. Пример
+функције која враћа листу је обртање редоследа елемената у листи. Ова
+функција такође постоји у стандардној библиотаци и зове се
+<code class="docutils literal notranslate"><span class="pre">.reverse()</span></code>. Како бисте ви написали ову функцију? Вероватно је
+најједноставније помоћу <em>слајса</em> <code class="docutils literal notranslate"><span class="pre">[::-1]</span></code>. Пробајте на нађете још неки
+начин.</p>
+
+<div data-childcomponent="obrni" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=obrni data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+def obrni(L):
+    R=L[::-1]
+    return R
+lista=[3,2,2,5,1,4,4]
+print(obrni(lista))
+</textarea>
+</div>
+</div>
+<div class="section" id="for">
+<h3>Претраживање листе помоћу <em>for</em> петље<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
+<p>Кад претражујемо листу ми за сваку вредност у листи проверавамо да ли
+испуњава одређени услов. Другим речима, проверавамо испуњеност одређеног
+логичког исказа за сваки елемент листе. Пајтонове библиотеке имају много
+могућности за претраживање низова различитих типова. Те могућности ћемо
+оставити за касније. Сада ћемо да видимо како да листу претражимо без
+увожења додатних библиотека. Главна полуга тог механизма је коришћење
+<em>for</em> петље.</p>
+<p>Кроз петљу пролазимо елемент по елемент и проверавамо да ли је услов
+испуњен. Свака <em>for</em> петља има бројач који је тренутно актуелни елемент
+и тај бројач се мења у сваком пролазу. У наставку следи неколико примера
+претраживања помоћу <em>for</em> петље. Обратите пажњу да некада бројач у петљи
+изима вредности из листе (прва два примера), а некад из колекције
+<em>range</em> која садржи индексе свих елемената листе (друга два примера). Да
+би <em>range</em> заиста обухватио све индексе листе потребно је да му
+проследимо аргумент <code class="docutils literal notranslate"><span class="pre">len(lista)</span></code> који говори колико је листа дугачка.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Који су све бројеви у листи мањи од 20?</p>
+
+    </div></div>
+
+<div data-childcomponent="for_pretrazivanje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=for_pretrazivanje data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[11,22,33,28,25,36,17,28,39,10,21,32]   # definišemo vrednosti elemenata liste
+for n in lista:                               # za svaku vrednost n iz liste
+    if n<20:                                  # proveravamo da li je n manje od 20
+        print(n)                              # ako jeste, ispisujemo tu vrednost
+</textarea>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Који су све бројеви у листи дељиви са 3?</p>
+
+    </div></div>
+
+<div data-childcomponent="deljivi_3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=deljivi_3 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[11,22,33,28,25,36,17,28,39,10,21,32]
+for n in lista:
+    if n%3==0:          # i%3==0 znači da je ostatak pri deljenju i sa 3 jednak nuli
+        print(n)
+</textarea>
+</div>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Напомена</p>
+<p>Напомена: Ако сте до сада пропустили да научите чему служе оператори <code class="docutils literal notranslate"><span class="pre">%</span></code>
+и <code class="docutils literal notranslate"><span class="pre">//</span></code>, да исправимо сада тај пропуст. Помоћу њих израчунавамо
+целобројни резултат дељења и остатак при том дељењу. На пример, кад
+17 делимо са 3, добијамо целобројни резултат 5 и остатак 2.
+Целобројни количник добијамо са <code class="docutils literal notranslate"><span class="pre">17//3</span></code>, а остатак при том дељењу
+са <code class="docutils literal notranslate"><span class="pre">17%3</span></code>. Ако су бројеви <em>m</em> и <em>n</em> дељиви, онда нема остатка при
+дељењу. Другим речима, остатак је једнак нули: <code class="docutils literal notranslate"><span class="pre">m%n==0</span></code>.</p>
+
+    </div></div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Који су индекси елемената са вредношћу 28?</p>
+
+    </div></div>
+
+<div data-childcomponent="indeks" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=indeks data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[11,22,33,14,25,36,17,28,39,10,21,32]
+for i in range(len(lista)):   # za sve moguće indekse od 0 do n-1
+    if lista[i]==28:          # proveravamo da li je vrednost lista[i] jednaka 28
+        print(i)              # ako jeste, ispisujemo je
+</textarea>
+</div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Пајтон има уграђену функцију <code class="docutils literal notranslate"><span class="pre">.index()</span></code> која враћа индекс првог елемента са траженом вредношћу. Она би за израз <code class="docutils literal notranslate"><span class="pre">lista.index(28)</span></code> вратила само индекс <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
+
+    </div></div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Који су индекси непарних бројева у листи?</p>
+
+    </div></div>
+
+<div data-childcomponent="neparni" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=neparni data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=[11,22,33,14,25,36,17,28,39,10,21,32]
+for i in range(len(lista)):
+    if lista[i]%2==1:       # ostatak pri deljenju sa 2 je 1, znači da je broj neparan
+        print(i)
+</textarea>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>Издвајање делова листе<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Да бисмо издвојили елементе листе који нас интересују, потребно је да
+знамо на којим се позицијама налазе. Ако знамо њихове индексе, онда само
+треба проћи кроз листу, узети елементe са тим индексима и ставити их у
+нову листу. Уколико индексе не знамо већ имамо само критеријум који
+вредност елемента листе треба да испуни, онда треба проћи кроз листу,
+видети који елементи задовољавају тражени критеријум, узети њихове
+вредности и ставити их у нову листу.</p>
+<div class="section" id="id8">
+<h4>Издвајање делова листе помоћу <em>for</em> петље<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>Најједноставнији начин за издвајање одређених елемената или делова листе
+је коришћењем <em>for</em> петље. Истина, ту треба написати највише линија
+кôда, али нема ограничења колико сложени могу да буду критеријуми.
+Логика издвајања тражених елемената је једноставна: осим оригиналне
+листе, имамо другу у којој су индекси елемената које хоћемо да издвојимо
+и трећу у коју стављамо издвојене елементе. Ова трећа листа је на
+почетку празна, али је онда при наредним итерацијама (тј. проласцима
+кроз петљу) допуњујемо траженим елементима помоћу функције
+<code class="docutils literal notranslate"><span class="pre">.append()</span></code>. Погледајте пример како из листе издвајамо само елементе
+са индексима 2, 3 и 6.</p>
+
+<div data-childcomponent="for_elementi" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=for_elementi data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=['a','b','c','d','e','f','g','h']
+indeksi=[2,3,6]
+izdvojeni=[]
+for i in indeksi:                # za svaki element i iz liste indeksi
+    izdvojeni.append(lista[i])   # dopuni listu izdvojeni vrednošću lista[i]
+print(izdvojeni)
+</textarea>
+</div>
+<p>Уколико не знамо индексе већ само услове за елементе које треба
+издвојити, морамо прво да проверимо да ли су испуњени. Ако елемент
+испуњава услов, онда тај елемент издвајамо. Примера ради, из претходно
+одређене листе <code class="docutils literal notranslate"><span class="pre">lista</span></code> можемо, на пример, да издвојимо само оне
+елементе чије су вредности самогласници.</p>
+
+<div data-childcomponent="for_eleemnti2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=for_eleemnti2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=['a','b','c','d','e','f','g','h']
+samoglasnici=['a','e','i','o','u']
+izdvojeni=[]
+for x in lista:
+    if x in samoglasnici:
+        izdvojeni.append(x)
+print(izdvojeni)
+</textarea>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>Издвајање делова листе помоћу слајсова<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>Пајтон допушта да индексе елемената које желимо да издвојимо представимо
+као слајс. Овај начин је врло једноставан, али ограниченог домета
+примене. Слајсови су само једноставни низови индекса. Ту нема места за
+било какве услове. Слајсови не могу да буду било који низови индекса већ
+само елементи чији се индекси периодично понављају. На пример, слајс за
+прва три елемента је <code class="docutils literal notranslate"><span class="pre">[:3]</span></code>, слајс за елементе са индексима од 3 до 6
+је <code class="docutils literal notranslate"><span class="pre">[3:7]</span></code> док слајс за сваки други елемент почевши од индекса 1 има
+облик <code class="docutils literal notranslate"><span class="pre">[1::2]</span></code>.</p>
+<p>Ево једног примера где би издвајање помоћу слајсова могло да помогне. У
+листи имамо наизменично имена и презимена, а желимо да издвојимо само
+презимена. Како то да учинимо?</p>
+
+<div data-childcomponent="slajsovi" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=slajsovi data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+teniseri_SRB=['Miomir','Kecmanović','Laslo','Đere','Dušan','Lajović','Novak','Đoković','Filip','Krajinović']
+print(teniseri_SRB[1::2])      # u uglastim zagradama je slajs za niz indeksa od 1 do kraja     liste sa korakom 2
+</textarea>
+</div>
+<p>Да хоћемо да издвојимо само имена, требало би да узмемо сваки други
+елемент почевши од индекса 0: <code class="docutils literal notranslate"><span class="pre">teniseri_SRB[0::2]</span></code>.</p>
+</div>
+<div class="section" id="list-comprehension">
+<h4>Издвајање делова листе помоћу <em>list comprehension</em> конструкције<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h4>
+<p>Издвајање елемената из листе тако што за то пишемо програм није нарочито
+елегантно решење. Коришћење <em>list comprehension</em> конструкције је много
+елегантније јер омогућава издвајање елемената листе у само једној линији
+кôда. У средњој школи ћете учити детаљније како се користи <em>list
+comprehension</em> конструкција. Зато је нећемо овде посебно објашњавати. То
+вас, међутим, не спречава да пробате ову конструкцију, сами закључите
+како ради и почнете да је примењујете. За посебно нестрпљиве, предлажемо
+да погледају исти овај курс за други разред средње школе. Тамо је све
+објашњено.</p>
+
+<div data-childcomponent="comprehension" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=comprehension data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+lista=['a','b','c','d','e','f','g','h']
+ls=[lista[i] for i in [2,3,6]]                # prvi primer, gde smo znali indekse
+print(ls)
+</textarea>
+</div>
+
+<div data-childcomponent="comprehension2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=comprehension2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+samoglasnici=['a','e','i','o','u']
+lista=['a','b','c','d','e','f','g','h']
+ls=[x for x in lista if x in samoglasnici]    # drugi primer, gde smo znali kriterijum
+print(ls)
+</textarea>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Помоћу <em>list comprehension</em> конструкције одреди и испиши
+разлику две листе, односно вредности свих елемената који се налазе у
+првој, а не налазе у другој листи.</p>
+
+    </div></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

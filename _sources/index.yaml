@@ -1,7 +1,28 @@
-courseId: kurs-osmi
+courseId: kurs-osmi-programiranje-revizija
 lang: sr-Cyrl
 title: Анализа и презентација података у Џупитеру за осми разред
 description:
+  willLearn: 
+    - Програмски језици и окружења погодни за анализу и обраду података.
+    - Унос података у једнодимензионе низове.
+    - Једноставне анализе низова података помоћу библиотечких функција (сабирање, просек, минимум, максимум, сортирање, филтрирање).
+    - Графичко представљање низова података.
+    - Унос и представљање табеларно записаних података.
+    - Анализе табеларно записаних података (просек сваке колоне, минимум сваке врсте, ...).
+    - Обраде табеларно записаних података (сортирање, филтрирање, ...).
+    - Груписање података и одређивање статистика за сваку групу.
+  requirements:
+    - Имаш инсталиран Пајтон
+    - Имаш рачунар са приступом интернету
+  toc:
+    - Intro to Petljadoc INDEX.yaml
+  externalLinks:  
+    - text: Sphinx Docs
+      href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+    - text: Petljadoc
+      href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
+    - text: Runestone Interactive
+      href: https://github.com/RunestoneInteractive/overview
   longDescription: |
     Овај курс је намењен ученицима 8. разреда основне школе за предмет Информатика и рачунарство у току другог полугодишта. 
     У оквиру овог курса детаљно je обрађенa наставнa темa Рачунарство где се ученици упознају са обрадом података применом 
@@ -18,161 +39,96 @@ description:
     <br />Овај курс Фондација Петља објавила je под лиценцом <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Creative Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)</a>.
     </p> 
   shortDescription: Анализа и презентација података у Џупитеру
-  willLearn: # list
-    - РАЧУНАРСТВО (РАЧ)
-    - Програмски језици и окружења погодни за анализу и обраду података.
-    - Унос података у једнодимензионе низове.
-    - Једноставне анализе низова података помоћу библиотечких функција (сабирање, просек, минимум, максимум, сортирање, филтрирање).
-    - Графичко представљање низова података.
-    - Унос и представљање табеларно записаних података.
-    - Анализе табеларно записаних података (просек сваке колоне, минимум сваке врсте, ...).
-    - Обраде табеларно записаних података (сортирање, филтрирање, ...).
-    - Груписање података и одређивање статистика за сваку групу.
-  requirements:
-    - Имаш инсталиран Пајтон
-    - Имаш рачунар са приступом интернету
-  toc:
-    - РАЧУНАРСТВО
-    - 1. Увод у Џупитер (*Jupyter*)
-    - 2. Низови података и линијски дијаграми
-    - 3. Хистограми и боје
-    - 4. Просек и медијана низа бројева
-    - 5. Фреквенцијска анализа и секторски дијаграми
-    - 6. Табеларно представљени подаци
-    - 7. Индексирање и транспоновање табеле
-    - 8. Модификације табеле и записивање табеле у датотеку
-    - 9. Сортирање, филтрирање и фреквенцијска анализа
-    - 10. Џупитер и Ексел
+
 
 lessons:
-  #########################################################################
-  #  JUPYTER
-  #########################################################################
-  - title: Припрема
-    folder: J0A
-    guid: 57f0351f-0af5-4cca-bb22-405a8dd506ec
+  - title: Пре него што почнеш
+    guid: 496214aa-7c33-4078-b768-93338be2fa33
+    description: Your first lesson. Description is not required attribute
+    folder: 01_Jupyter
     activities:
       - type: reading
-        title: Увод
-        file: J0A.rst
-        guid: a881c6a8-b952-49b1-9a52-66c8e4da2c32
-  - title: 1. Увод у Џупитер (*Jupyter*)
-    folder: J01
-    guid: fc70fa3d-6cfd-4da2-9b2f-ae4ce4d56342
+        title: Како да користиш приручник
+        file: howto.rst 
+        description: #Optional
+        guid: 434b8b09-28c0-4e9f-844b-5c1be4ee76e6
+      - type: reading
+        title: Покретање Џупитер (*Jupyter*) радних свески
+        file: J0A.rst 
+        description: #Optional
+        guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
+      - type: reading
+        title: Увод у Џупитер (*Jupyter*)
+        file: J01.rst 
+        description: #Optional
+        guid: 6170b1a8-9f82-4411-bada-38b6006e4f5f
+  - title: Елементи програмирања
+    guid: 5fa7e37d-b0ae-42a1-94a9-2911f8497f41
+    description: Your first lesson. Description is not required attribute
+    folder: 02_elementi_programiranja
     activities:
       - type: reading
-        title: Лекција
-        file: J01.rst
-        guid: 75ffb1f6-65ce-4813-8561-43f09fd730c2
-  - title: 2. Низови података и линијски дијаграми
-    folder: J02
-    guid: 37d8ff96-8db0-4f9d-a0e4-4edbc129b966
+        title: Елементи програмирања у Пајтону
+        file: elementi_programiranja.rst 
+        description: #Optional
+        guid: d29131a9-3ed0-4cbc-8467-b7b8af1c7b0e
+  - title: Рад са низовима података
+    guid: 66d9dd92-ceb4-4554-8de9-a6ba90220af2
+    description: Your first lesson. Description is not required attribute
+    folder: 03_nizovi
     activities:
       - type: reading
-        title: Лекција
-        file: J02.rst
-        guid: d74de1ed-a619-4e96-a051-ccb6b83ade94
-      - type: quiz 
-        title: Квиз
-        file: testJ02.rst
-        guid: 9240abe3-cb61-4bd7-a210-45d625d0a1c9
-  - title: 3. Хистограми и боје
-    folder: J03
-    guid: 431ba1e5-f7f6-457d-be06-1b7b6f346c9f
+        title: Рад са низовима података
+        file: nizovi.rst 
+        description: #Optional
+        guid: a1c8201c-a43f-49c8-98e3-9334b7211c3d
+  - title: Графичко представљање података
+    guid: 1fff033f-c9ac-42d9-8fe8-bd0076d29d04
+    description: Your first lesson. Description is not required attribute
+    folder: 04_graficko
     activities:
       - type: reading
-        title: Лекција
-        file: J03.rst
-        guid: 72f7632d-e790-4cd2-bbff-3cd43b382353
-      - type: quiz 
-        title: Квиз
-        file: testJ03.rst
-        guid: 0cf9776c-645c-4c77-99b0-adad60887274
-  - title: 4. Просек и медијана низа бројева
-    folder: J04
-    guid: f5fc2c48-91a8-40b6-8af1-b274d9cc9c28
+        title: Графичко представљање података
+        file: graficko.rst 
+        description: #Optional
+        guid: fc7759c2-c948-4bf1-afa4-a4961a1b1698
+      - type: reading
+        title: Линијски, тачкасти и стубични дијаграми
+        file: graficko2.rst 
+        description: #Optional
+        guid: f45f8fd3-0efc-4f40-bf3e-7f2cdea415d4
+      - type: reading
+        title: Хистограм
+        file: hist.rst 
+        description: #Optional
+        guid: 90d4eb01-3996-4abe-864c-71de22114772
+  - title: Рад са табелама помоћу библиотеке Pandas
+    guid: 0859aac6-9582-4bee-a118-d71bad5dd258
+    description: Your first lesson. Description is not required attribute
+    folder: 05_tabele
     activities:
       - type: reading
-        title: Лекција
-        file: J04.rst
-        guid: 55fd3835-2c20-41c9-8a59-a22e83d6b379
-      - type: quiz 
-        title: Квиз
-        file: testJ04.rst
-        guid: c9960c75-a7a7-46ed-b3fc-6232000a05e9
-  - title: 5. Фреквенцијска анализа и секторски дијаграми
-    folder: J05
-    guid: 2f5f4da8-7eff-429e-837b-c5fbdf877a85
+        title: Представљање табеларно задатих података помоћу листи
+        file: tabele_pandas.rst 
+        description: #Optional
+        guid: ea3f8c8a-3393-4801-85e1-fd6056501a83
+      - type: reading
+        title: Библиотека pandas и структура података DataFrame
+        file: data_frame.rst 
+        description: #Optional
+        guid: 37b1d0f9-fa42-46c3-b427-5699b46f0e48
+  - title: Основе обраде и приказа табеларних података
+    guid: f3602fa9-292b-4c02-afef-389936b96837
+    description: Your first lesson. Description is not required attribute
+    folder: 06_obrada_i_prikaz
     activities:
       - type: reading
-        title: Лекција
-        file: J05.rst
-        guid: fc121b1a-d67a-44c5-b602-ed872f120601
-      - type: quiz 
-        title: Квиз
-        file: testJ05.rst
-        guid: 7665c9fb-fc59-418f-ad83-5d4abb930557
-  - title: 6. Табеларно представљени подаци
-    folder: J06
-    guid: 702b161e-cbf6-45ce-b51b-8a746469670f
-    activities:
+        title: Обрада табеларних података
+        file: obrada.rst 
+        description: #Optional
+        guid: 3bba89f2-3fb3-4b51-95fd-ed47162e56a6
       - type: reading
-        title: Лекција
-        file: J06.rst
-        guid: d4a86a8b-c345-4ad9-9fcb-3d61a862d4ad
-      - type: quiz 
-        title: Квиз
-        file: testJ06.rst
-        guid: ba5720ee-9b0d-45ca-b655-e35ddaae4c1c
-  - title: 7. Индексирање и транспоновање табеле
-    folder: J07
-    guid: 90930251-c14a-43cd-889c-2df9a832a1c1
-    activities:
-      - type: reading
-        title: Лекција
-        file: J07.rst
-        guid: 4550727a-f260-4f68-aab8-a91caf0f6341
-      - type: quiz 
-        title: Квиз
-        file: testJ07.rst
-        guid: ed505e2e-f785-4d93-8daa-a2277772bf0b
-  - title: 8. Модификације табеле и записивање табеле у датотеку
-    folder: J08
-    guid: 44704cbf-f354-40b0-ad38-c40e50fbef93
-    activities:
-      - type: reading
-        title: Лекција
-        file: J08.rst
-        guid: 64889144-fd61-458c-b3a9-f6e73a99f5d8
-      - type: quiz 
-        title: Квиз
-        file: testJ08.rst
-        guid: 73c13268-3cf9-4958-a6e8-a9ea1b5d373f
-  - title: 9. Сортирање, филтрирање и фреквенцијска анализа
-    folder: J09
-    guid: eba4e02e-be6b-421e-b65c-b7835dbb3c31
-    activities:
-      - type: reading
-        title: Лекција
-        file: J09.rst
-        guid: a47928cf-3062-4b58-a16e-e7a606757434
-      - type: quiz 
-        title: Квиз
-        file: testJ09.rst
-        guid: 13a089d9-0fff-4332-b6e8-3c0868d10874
-  - title: 10. Џупитер и Ексел
-    folder: J10
-    guid: 02778fae-ad2a-412e-b638-91bcabbc3cec
-    activities:
-      - type: reading
-        title: Лекција
-        file: J10.rst
-        guid: c23b8f42-44e1-4404-abd7-8e91889e3206
-      - type: quiz 
-        title: Квиз
-        file: testJ10.rst
-        guid: 7a9050f2-ee77-44df-9e20-135320511fae
-
-
-
-
+        title: Статистички и графички приказ табеларних података
+        file: prikaz.rst 
+        description: #Optional
+        guid: 6ea62538-4f67-4017-a242-e4b02b3b83c9
