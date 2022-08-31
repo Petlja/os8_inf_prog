@@ -312,14 +312,14 @@
 приказујемо податке, морамо да их сведемо на две димензије и да цео
 графикон прикажемо као скуп тачака у равни. Због тога су
 најједноставнији они графикони где низ тачака одређују два низа
-координата, један за <em>x</em>, други за <em>y</em>-осу.</p>
+координата - један за <em>x</em>, други за <em>y</em>-осу.</p>
 
     <div class="note-wrapper technicalnote-type">
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/technicalnote-img.svg" class="note-image technicalnote-image" /> 
         <div class="course-content">
             
-<p>Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у <a class="reference external" href="https://github.com/Petlja/VIII_prog_rev_radni/archive/refs/heads/main.zip">фолдеру за рад офлајн</a> покренути Џупитер свеску <cite>Graficko predstavljanje podataka.ipynb</cite> на начин на који је то објашњено у поглављу <a class="reference external" href="/J0A/J0A.html#jupyter">Покретање Џупитер радних свески</a> у уводу овог приручника.</p>
+<p>Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у <a class="reference external" href="https://github.com/Petlja/os8_inf_prog_radni/archive/refs/heads/main.zip">фолдеру за рад офлајн</a> покренути Џупитер свеску <code class="docutils literal notranslate"><span class="pre">04_graficko_predstavljanje.ipynb</span></code>, на начин на који је то објашњено у поглављу <a class="reference external" href="/J0A/J0A.html#jupyter">Покретање Џупитер радних свески</a> у уводу овог приручника, или тако што ћеш отићи на <a class="reference external" href="https://petlja.github.io/os8_inf_prog_radni/lab/index.html">овај линк</a> и тамо радити задатке.</p>
 
     </div></div>
 <p>У следећем примеру ћемо помоћу функције <code class="docutils literal notranslate"><span class="pre">.scatter()</span></code> приказати тачке
@@ -336,21 +336,21 @@
 </div>
 <a class="reference internal image-reference" href="../_images/output_10_1.png"><img alt="../_images/output_10_1.png" class="align-center" src="../_images/output_10_1.png" style="width: 500px;" /></a>
 <p>Вероватно примећујете да координатни систем не почиње од нуле. Функција
-сама подешава границе тако да максимално искорити простор који је на
+сама подешава границе тако да максимално искористи простор који је на
 располагању. То можете да промените сами помоћу функција <code class="docutils literal notranslate"><span class="pre">.xlim()</span></code> и
-<code class="docutils literal notranslate"><span class="pre">.ylim()</span></code>. Ставите, на пример,</p>
+<code class="docutils literal notranslate"><span class="pre">.ylim()</span></code>. Ставите, на пример…</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>одмах после линије у којој је <code class="docutils literal notranslate"><span class="pre">.scatter()</span></code> функција.</p>
+<p>….одмах после линије у којој је <code class="docutils literal notranslate"><span class="pre">.scatter()</span></code> функција.</p>
 <p>Претходни пример је вероватно превише једноставан па ћемо дати један
 сложенији. Ми у пракси ретко кад укуцавамо све вредности које треба
 приказати на графику. Податке за график или учитавамо из неког фајла или
 их рачунамо. Овде ћемо дати пример са рачунањем вредности. Конкретно,
 узећемо све целобројне вредности од -5 до 5 за <em>x</em> координату, а њихове
 квадрате за <em>y</em> координату.</p>
-<p>Начин на који записујемо све бројаве од -5 до 5 вам је можда необичан,
+<p>Начин на који записујемо све бројеве од -5 до 5 вам је можда необичан,
 али не желимо да куцамо свих 11 бројева. Зато користимо колекцију типа
 <code class="docutils literal notranslate"><span class="pre">range()</span></code> која даје све те бројеве, да би је потом претворили у листу
 помоћу функције <code class="docutils literal notranslate"><span class="pre">list()</span></code>. За другу координату рачунамо вредности
@@ -367,7 +367,7 @@
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/output_13_1.png"><img alt="../_images/output_13_1.png" class="align-center" src="../_images/output_13_1.png" style="width: 500px;" /></a>
-<p>Тачкасти дијаграми су стандарни начин приказа података који су добијени
+<p>Тачкасти дијаграми су стандардни начин приказа података који су добијени
 мерењем. Ипак, често се уместо тачкастих користе линијски дијаграми који
 суседне тачке у низу повезују правим линијама, односно дужима. За овај
 тип дијаграма користимо функцију <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>. Да видимо сад исте оне
@@ -400,7 +400,7 @@
 </div>
 <a class="reference internal image-reference" href="../_images/output_18_1.png"><img alt="../_images/output_18_1.png" class="align-center" src="../_images/output_18_1.png" style="width: 500px;" /></a>
 <p>За разлику од тачкастих и линијских дијаграма где вредности за <em>x</em> и <em>y</em>
-координате могу да имају било које нецелобројне вредности, стубичне
+координате могу да имају било које нецелобројне вредности, стубичасте
 дијаграме обично користимо за податке који на <em>x</em>-оси имају узастопне
 целобројне вредности, редне бројеве или стрингове као називе категорија.
 Идеја стубичастог дијагарама је да омогући лако поређење између вредности
@@ -408,7 +408,7 @@
 стубића свугде исте. Због тога су редни бројеви или називи категорија
 идеални за ознаке на <em>x</em>-оси.</p>
 <p>Уместо бројева од 1 до 6 можемо да ставимо одговарајућа имена
-категорија, нпр. “прва”, “друга”, …, “шеста” утакмица. Графикон ће и
+категорија, нпр. „прва“, „друга“, …, „шеста“ утакмица. Графикон ће и
 тада изгледати исто, само ће ознаке на <em>x</em>-оси бити другачије.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="s1">&#39;прва&#39;</span><span class="p">,</span><span class="s1">&#39;друга&#39;</span><span class="p">,</span><span class="s1">&#39;трећа&#39;</span><span class="p">,</span><span class="s1">&#39;четврта&#39;</span><span class="p">,</span><span class="s1">&#39;пета&#39;</span><span class="p">,</span><span class="s1">&#39;шеста&#39;</span><span class="p">],</span><span class="n">pts</span><span class="p">)</span>
 </pre></div>
@@ -417,7 +417,7 @@
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/output_21_1.png"><img alt="../_images/output_21_1.png" class="align-center" src="../_images/output_21_1.png" style="width: 500px;" /></a>
-<p>Секторски дијаграми (или “питице”) могу да прикажу исте ове податке. Они
+<p><strong>Секторски дијаграми</strong> (или „питице“) могу да прикажу исте ове податке. Они
 површину круга деле на делове (секторе) чије су површине сразмерне
 вредностима у низу. Овај тип дијаграма се сматра атрактивним иако има
 лошу прегледност и слабе могућности поређења вредности у низу. Секторске

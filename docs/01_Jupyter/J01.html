@@ -306,10 +306,10 @@
     
   <div class="section" id="jupyter">
 <h1>Увод у Џупитер (<em>Jupyter</em>)<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h1>
-<p>У овој лекцији ћеш научити:</p>
+<p>У овој лекцији научићеш:</p>
 <ol class="arabic simple">
-<li><p>шта је Џупитер (<em>Jupyter</em>), како се крећеш кроз Џупитер радну свеску (<em>Jupyter Notebook</em>) и како се Џупитер радна свеска користи за рачунање израза;</p></li>
-<li><p>како се у Џупитеру користе променљиве и како се радна свеска користи покретање мањих Пајтон (<em>Python</em>) програма; и</p></li>
+<li><p>шта је Џупитер (<em>Jupyter</em>), како се крећеш кроз Џупитер радну свеску (<em>Jupyter Notebook</em>) и како се Џупитер радна свеска користи за рачунање израза,</p></li>
+<li><p>како се у Џупитеру користе променљиве и како се радна свеска користи покретање мањих Пајтон (<em>Python</em>) програма и</p></li>
 <li><p>шта су библиотеке функција и како се позивају функције из стандардних библиотека.</p></li>
 </ol>
 
@@ -318,11 +318,11 @@
         <img src="../_static/img/technicalnote-img.svg" class="note-image technicalnote-image" /> 
         <div class="course-content">
             
-<p>Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у <a class="reference external" href="https://github.com/Petlja/VIII_prog_rev_radni/archive/refs/heads/main.zip">фолдеру за рад офлајн</a> покренути Џупитер свеску <cite>Ј01.ipynb</cite> на начин на који је то објашњено у поглављу <a class="reference external" href="/J0A/J0A.html#jupyter">Покретање Џупитер радних свески</a> у уводу овог приручника.</p>
+<p>Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у <a class="reference external" href="https://github.com/Petlja/os8_inf_prog_radni/archive/refs/heads/main.zip">фолдеру за рад офлајн</a> покренути Џупитер свеску <code class="docutils literal notranslate"><span class="pre">01_Uvod.ipynb</span></code>, на начин на који је то објашњено у поглављу <a class="reference external" href="/J0A/J0A.html#jupyter">Покретање Џупитер радних свески</a> у уводу овог приручника, или тако што ћеш отићи на <a class="reference external" href="https://petlja.github.io/os8_inf_prog_radni/lab/index.html">овај линк</a> и тамо радити задатке.</p>
 
     </div></div>
-<div class="section" id="id3">
-<h2>Џупитер (<em>Jupyter</em>) уме да рачуна<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>Џупитер (<em>Jupyter</em>) уме да рачуна<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Џупитер (<em>Jupyter</em>) је интерактивна радна свеска у коју можеш да уносиш текст (као текст ког управо читаш), да рачунаш, да покрећеш једноставније Пајтон програме, да обрађујеш податке, да приказујеш податке у виду табеле и дијаграма, и још много тога.</p>
 
     <div  id="9En4OAaxvVA" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
@@ -339,9 +339,9 @@
     
     
     <p>Свака Џупитер <em>радна свеска</em> се састоји из низа ћелија, а свака ћелија може да садржи текст, математички израз или низ Пајтон наредби. За сада нећемо објашњавати како се у Џупитер ћелију уноси текст, већ ћемо пажњу усмерити на рачунање израза и извршавање Пајтон наредби.</p>
-<p>Када се у Џупитер ћелију унесе неки израз или Пајтон наредба садржај ћелије се може израчунати тако што се кликне на дугме <strong>Run</strong> при врху стране:</p>
+<p>Када се у Џупитер ћелију унесе неки израз или Пајтон наредба - садржај ћелије се може израчунати тако што се кликне на дугме <strong>Run</strong> при врху стране…</p>
 <a class="reference internal image-reference" href="../_images/JupyterMenuRun.jpg"><img alt="../_images/JupyterMenuRun.jpg" class="align-center" src="../_images/JupyterMenuRun.jpg" style="width: 780px;" /></a>
-<p>или се на тастатури притисне [CTRL]+[ENTER]</p>
+<p>….или се на тастатури притисне [CTRL]+[ENTER].</p>
 <p>Ево примера:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mi">3</span> <span class="o">*</span> <span class="mi">19</span>
 <span class="gh">Out[1]: </span><span class="go">57</span>
@@ -355,11 +355,11 @@
 </div>
 <p>Да се подсетимо, две звездице у Пајтону означавају степеновање.</p>
 </div>
-<div class="section" id="id4">
-<h2>Џупитер уме да користи променљиве и да извршава Пајтон команде<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>Понекад је згодно именовати вредности, поготово ако се ради о компликованим бројевима као што је то <span class="math notranslate nohighlight">\(\pi\)</span> или када се ради о компликованим изразима. Те вредности касније можемо да користимо тако што наведемо име које смо им дали. На пример, процењује се да је на дан 1.7.2019. на свету било 7.714.576.923 људи. Наредба</p>
+<div class="section" id="id5">
+<h2>Џупитер уме да користи променљиве и да извршава Пајтон команде<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Понекад је згодно именовати вредности, поготово ако се ради о компликованим бројевима као што је то <span class="math notranslate nohighlight">\(\pi\)</span> или када се ради о компликованим изразима. Те вредности касније можемо да користимо тако што наведемо име које смо им дали. На пример, процењује се да је на дан 1.7.2019. на свету било 7.714.576.923 људи. Наредба:</p>
 <p><code class="docutils literal notranslate"><span class="pre">BrLjudiNaSvetu_2019</span> <span class="pre">=</span> <span class="pre">7714576923</span></code></p>
-<p>ће у систем увести нову променљиву <code class="docutils literal notranslate"><span class="pre">BrLjudiNaSvetu_2019</span></code> којој ће бити додељена вредност 7714576923. Да се подсетимо: имена променљивих у Пајтону морају да почну словом и могу да садрже слова, цифре и специјални знак _ (доња црта).</p>
+<p>ће у систем увести нову променљиву: <code class="docutils literal notranslate"><span class="pre">BrLjudiNaSvetu_2019</span></code> којој ће бити додељена вредност 7714576923. Да се подсетимо: имена променљивих у Пајтону морају да почну словом и могу да садрже слова, цифре и специјални знак _ (доња црта).</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">BrLjudiNaSvetu_2019</span> <span class="o">=</span> <span class="mi">7714576923</span>
 </pre></div>
 </div>
@@ -371,9 +371,9 @@
 <p>Приметимо да се приликом записивања децималних бројева у Пајтону користи <em>децимална тачка</em>, а не децимални зарез, како је то прописано нашим правописом!
 Хајде сада да решимо још један задатак.</p>
 </div>
-<div class="section" id="id5">
-<h2>Библиотеке функција<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>У модерним програмским језицима, а Пајтон је један од њих, могу да се ураде невероватне ствари зато што долазе са обиљем <em>функција</em> које су већ испрограмиране. Тако се кориснику система (или програмеру) умногоме олакшава живот: већина ствари које просечном кориснику требају су већ испрограмиране, само треба наћи одговарајућу функцију!</p>
+<div class="section" id="id6">
+<h2>Библиотеке функција<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>У модерним програмским језицима, а Пајтон је један од њих, могу да се ураде невероватне ствари зато што долазе са обиљем <em>функција</em> које су већ испрограмиране. Тако се кориснику система (или програмеру) умногоме олакшава живот јер већина ствари које просечном кориснику требају већ су испрограмиране, само треба наћи одговарајућу функцију!</p>
 <p>Да би се корисници лакше снашли у овом обиљу, све функције које долазе уз програмски језик (односно, одговарајуће окружење) су груписане у <em>библиотеке функција</em>.</p>
 <p>Рецимо, библиотека математичких функција се зове <code class="docutils literal notranslate"><span class="pre">math</span></code>. Она садржи функције као што су <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> (која рачуна <em>квадратни корен</em>), <code class="docutils literal notranslate"><span class="pre">sin</span></code> (која рачуна <em>синус</em> угла) и <code class="docutils literal notranslate"><span class="pre">cos</span></code> (која рачуна <em>косинус</em> угла), али и математичке константе као што је <code class="docutils literal notranslate"><span class="pre">pi</span></code> (која представља добру апроксимацију броја <span class="math notranslate nohighlight">\(\pi\)</span>).</p>
 <p>На пример, програм који рачуна обим круга датог полупречника изгледа овако:</p>
@@ -385,7 +385,7 @@
 <span class="go">Obim kruga je: 75.39822368615503</span>
 </pre></div>
 </div>
-<p>Први ред у овом програму показује како се из неке библиотеке може увести функција или константа која нам је потребна. Наредба</p>
+<p>Први ред у овом програму показује како се из неке библиотеке може увести функција или константа која нам је потребна. Наредба:</p>
 <p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">pi</span></code></p>
 <p>дословно значи: из библиотеке <code class="docutils literal notranslate"><span class="pre">math</span></code> увези појам <code class="docutils literal notranslate"><span class="pre">pi</span></code>. Тиме смо у програм увели име <code class="docutils literal notranslate"><span class="pre">pi</span></code> и слободно можемо да га користимо.</p>
 <p>Ево још једног примера. Написаћемо Пајтон програм који одређује хипотенузу <span class="math notranslate nohighlight">\(c\)</span> правоуглог троугла ако знамо његове катете <span class="math notranslate nohighlight">\(a\)</span> и <span class="math notranslate nohighlight">\(b\)</span>. (Да се подсетимо, према Питагориној теореми је <span class="math notranslate nohighlight">\(c = \sqrt{a^2 + b^2}\)</span>.)</p>
@@ -414,10 +414,10 @@
     </div>
     
     
-    <p>Рад са интерактивним окружењима нам омогућује да уместо целих програма пишемо „парчиће кода” које
+    <p>Рад са интерактивним окружењима нам омогућује да уместо целих програма пишемо „парчиће“ кода које
 можемо да мењамо како нам одговара и да их извршавамо колико год пута желимо. Тако се лакше експериментише
 са подацима (што је важан део модерног разумевања обраде података и о томе ћемо причати касније), и штеди време.
-Тада углавном не користимо наредбу <code class="docutils literal notranslate"><span class="pre">input</span></code> за учитавање података од корисника већ директно у код унесемо вредности које нас интересују.</p>
+Тада углавном не користимо наредбу <code class="docutils literal notranslate"><span class="pre">input</span></code> за учитавање података од корисника већ директно у кôд унесемо вредности које нас интересују.</p>
 <p>Претходни проблем (рачунање хипотенузе правоуглог троугла) можемо да решимо и овако:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [8]: </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
 <span class="gp">   ...: </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
@@ -458,8 +458,8 @@
     
     
     </div>
-<div class="section" id="id6">
-<h2>Задаци<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h2>Задаци<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <p>За вежбу покрени Џупитер окружење и реши задатке из радне свеске J01.ipynb</p>
 </div>
 </div>

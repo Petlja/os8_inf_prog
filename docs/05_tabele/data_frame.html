@@ -312,7 +312,7 @@
         <img src="../_static/img/technicalnote-img.svg" class="note-image technicalnote-image" /> 
         <div class="course-content">
             
-<p>Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у <a class="reference external" href="https://github.com/Petlja/VIII_prog_rev_radni/archive/refs/heads/main.zip">фолдеру за рад офлајн</a> покренути Џупитер свеску <cite>Rad sa tabelama pomocu pandas biblioteke.ipynb</cite> на начин на који је то објашњено у поглављу <a class="reference external" href="/J0A/J0A.html#jupyter">Покретање Џупитер радних свески</a> у уводу овог приручника.</p>
+<p>Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у <a class="reference external" href="https://github.com/Petlja/os8_inf_prog_radni/archive/refs/heads/main.zip">фолдеру за рад офлајн</a> покренути Џупитер свеску <code class="docutils literal notranslate"><span class="pre">05_tabele_pandas.ipynb</span></code>, на начин на који је то објашњено у поглављу <a class="reference external" href="/J0A/J0A.html#jupyter">Покретање Џупитер радних свески</a> у уводу овог приручника, или тако што ћеш отићи на <a class="reference external" href="https://petlja.github.io/os8_inf_prog_radni/lab/index.html">овај линк</a> и тамо радити задатке.</p>
 
     </div></div>
 <p>За ефикасно манипулисање табеларно представљеним подацима у Пајтону
@@ -323,8 +323,8 @@
 </pre></div>
 </div>
 <p>Из ове библиотеке ћемо користити структуру података која се зове
-<em>DataFrame</em> (енгл. <em>data</em> значи „подаци”, <em>frame</em> значи „оквир”, тако да
-<em>DataFrame</em> значи „оквир са подацима”, односно „табела”).</p>
+<em>DataFrame</em> (енгл. <em>data</em> значи „подаци“, <em>frame</em> значи „оквир“, тако да
+<em>DataFrame</em> значи „оквир са подацима“, односно „табела“).</p>
 <p>Податке о деци сада лако можемо да препакујемо у <em>DataFrame</em> позивом
 функције са истим именом:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">podaci</span><span class="p">)</span>
@@ -627,21 +627,26 @@
 <span class="n">Name</span><span class="p">:</span> <span class="n">Visina</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
 </pre></div>
 </div>
-<p>Имена свих колона су увек доступна у облику листе овако:</p>
+<p>Имена свих колона су увек доступна у облику листе, овако:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Index</span><span class="p">([</span><span class="s1">&#39;Ime&#39;</span><span class="p">,</span> <span class="s1">&#39;Pol&#39;</span><span class="p">,</span> <span class="s1">&#39;Starost&#39;</span><span class="p">,</span> <span class="s1">&#39;Masa&#39;</span><span class="p">,</span> <span class="s1">&#39;Visina&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="id3">
-<h2>Функције за елементарну анализу табеларних података<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>Функције за елементарну анализу табеларних података<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Кад су подаци сложени у <em>DataFrame</em>, помоћу следећих функција лако
-можемо да вршимо елементарну анализу података у табели: - <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> –
-рачуна збир елемената у колони (сума); - <code class="docutils literal notranslate"><span class="pre">.mean()</span></code> – рачуна средњу
-вредност елемената у колони; - <code class="docutils literal notranslate"><span class="pre">.median()</span></code> – рачуна медијану елемената
-у колони; - <code class="docutils literal notranslate"><span class="pre">.min()</span></code> – рачуна најмању вредност у колони (минимум); -
-<code class="docutils literal notranslate"><span class="pre">.max()</span></code> – рачуна највећу вредност у колони (максимум).</p>
+можемо да вршимо елементарну анализу података у табели:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.sum()</span></code> – рачуна збир елемената у колони (сума);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.mean()</span></code> – рачуна средњу вредност елемената у колони;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.median()</span></code> – рачуна медијану елемената у колони;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.min()</span></code> – рачуна најмању вредност у колони (минимум);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.max()</span></code> – рачуна највећу вредност у колони (максимум).</p></li>
+</ul>
+</div></blockquote>
 <p>Да видимо како то ради на примеру табеле <code class="docutils literal notranslate"><span class="pre">tabela</span></code>. Конкретно, висину
 најнижег детета у групи можемо да добијемо са:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela</span><span class="p">[</span><span class="s2">&quot;Visina&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
@@ -672,10 +677,10 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>Рачун са колонама и редовима табеле<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>Рачун са колонама и редовима табеле<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Колико год било унапред дефинисаних функција за анализу података у
-табели, то је ограничен број. Нама може да затреба нешто другачије. У
+табели, то је ограничен број. Нама може да затреба нешто друго. У
 том случају ће бити потребно да напишемо програм који израчунава тражену
 вредност. Овде ћемо приказати неке једноставне примере.</p>
 <p>Кренимо од скупа података о оценама у једном разреду. У ћелији испод
@@ -862,10 +867,10 @@
 </div>
 <p>Да бисмо израчунали средње вредности по редовима, тј. за сваког ученика,
 потребно је да уведемо нови начин приступа подацима у табели. Одређеном
-реду табеле не можемо да приступимо без “аксесора”, посебних функција
+реду табеле не можемо да приступимо без „аксесора“, посебних функција
 писаних за објекте типа DataFrame, чији су аргументи имена редова/колона
 или њихови индекси у угластим заградама. Аксесор, помоћу ког приступамо
-редовима и појединачним елементима табеле је <code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code>. Аргументи овог
+редовима и појединачним елементима табеле, јесте <code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code>. Аргументи овог
 аксесора су нумерички индекси редова и колона који почињу од нуле.</p>
 <p>На пример, податке из трећег реда (индекс је 2) табеле добијамо са:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ocene</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
@@ -885,7 +890,7 @@
 <p>Да бисмо из реда издвојили само нумеричке вредности, тј. оцене, потребно
 је да аксесор добије и други аргумент. Осим индекса реда, потребно је да
 ставимо и индексе колона. У овом примеру ћемо узети све индексе почевши
-од индекса 1 јер име у колони са индексом нула.</p>
+од индекса 1 јер се име налази у колони са индексом нула.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ocene</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">:]</span>
 </pre></div>
 </div>

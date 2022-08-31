@@ -314,7 +314,7 @@
 <div class="section" id="id2">
 <h2>Обрада табеларних података<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Много тога за шта су нам потребни програмерско знање и труд при обради
-података у листама постаје једноставна примена готових функција када
+података у листама, постаје једноставна примена готових функција када
 податке спакујемо у <em>DataFrame</em>. На тај начин нам библиотека <em>pandas</em>
 омогућава да рад са табелама буде једноставан, брз и ефикасан.</p>
 
@@ -323,11 +323,11 @@
         <img src="../_static/img/technicalnote-img.svg" class="note-image technicalnote-image" /> 
         <div class="course-content">
             
-<p>Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у <a class="reference external" href="https://github.com/Petlja/VIII_prog_rev_radni/archive/refs/heads/main.zip">фолдеру за рад офлајн</a> покренути Џупитер свеску <cite>Osnove obrade i prikaza tabelarnih podataka.ipynb</cite> на начин на који је то објашњено у поглављу <a class="reference external" href="/J0A/J0A.html#jupyter">Покретање Џупитер радних свески</a> у уводу овог приручника.</p>
+<p>Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у <a class="reference external" href="https://github.com/Petlja/os_inf_prog_Radni/archive/refs/heads/main.zip">фолдеру за рад офлајн</a> покренути Џупитер свеску <code class="docutils literal notranslate"><span class="pre">06_obrada_prikaz.ipynb</span></code>, на начин на који је то објашњено у поглављу <a class="reference external" href="/J0A/J0A.html#jupyter">Покретање Џупитер радних свески</a> у уводу овог приручника, или тако што ћеш отићи на <a class="reference external" href="https://petlja.github.io/os8_inf_prog_radni/lab/index.html">овај линк</a> и тамо радити задатке.</p>
 
     </div></div>
-<div class="section" id="id5">
-<h3>Учитавање табеле из датотеке<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>Учитавање табеле из датотеке<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>Податке најчешће чувамо у табелама. Чак су и базе података само
 колекције различитих табела. За поновну употребу табеле снимамо у
 датотеке (или фајлове, како их понекад зовемо). Те снимљене табеле
@@ -485,8 +485,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id6">
-<h3>Сортирање<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>Сортирање<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>Библиотека <em>pandas</em> има прегршт корисних функција за рад са табелама и
 њиховим колонама. Функција <code class="docutils literal notranslate"><span class="pre">.sort_values()</span></code> сортира све вредности у
 одређеној колони и прерасподељује садржај осталих колона у складу са
@@ -497,7 +497,7 @@
 буквално значи да не сортира у растућем (енгл. <em>ascending</em>) редоследу.
 Примера ради, ако хоћемо да видимо у које су се школе ученици уписивали
 са најмањим и највећим бројем бодова, можемо да сортирамо вредности по
-тој колони и погледамо које се школе налази на почетку и крају табеле.</p>
+тој колони и погледамо које се школе налазе на почетку и крају табеле.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Мин. бодова&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -645,7 +645,7 @@
 бодова последњег уписаног ученика.</p>
 <p>Због прегледности исписа згодније нам је да стубићи буду хоризонтални.
 Зато користимо функцију <code class="docutils literal notranslate"><span class="pre">barh()</span></code> уместо <code class="docutils literal notranslate"><span class="pre">bar()</span></code>. Пробајте и са
-<code class="docutils literal notranslate"><span class="pre">bar()</span></code> да видите како би изгледало.</p>
+<code class="docutils literal notranslate"><span class="pre">bar()</span></code>, да видите како би изгледало.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spd</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Мин. бодова&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>   <span class="c1"># sortiramo tabelu po min. broju bodova i dodeljujemo je novoj tabeli</span>
 <span class="n">spd20</span><span class="o">=</span><span class="n">spd</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>                                       <span class="c1"># zbog preglednosti, pomoću slajsa, izdvajamo samo prvih 20 redova</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">spd20</span><span class="p">[</span><span class="s1">&#39;Школа&#39;</span><span class="p">],</span><span class="n">spd20</span><span class="p">[</span><span class="s1">&#39;Мин. бодова&#39;</span><span class="p">],)</span>       <span class="c1"># crtamo horizontalni stubičasti dijagram</span>
@@ -680,8 +680,8 @@
 </div>
 <a class="reference internal image-reference" href="../_images/obrada_output_28_0.png"><img alt="../_images/obrada_output_28_0.png" class="align-center" src="../_images/obrada_output_28_0.png" style="width: 500px;" /></a>
 </div>
-<div class="section" id="id7">
-<h3>Филтрирање табеле<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>Филтрирање табеле<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>Филтрирање значи да од целе табеле желимо да издвојимо само оне редове
 који нас интересују. За филтрирање података у табели користимо
 критеријуме, односно логичке исказе као што је нпр.

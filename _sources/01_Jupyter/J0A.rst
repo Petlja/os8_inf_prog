@@ -28,33 +28,35 @@
 \.... преузми ZIP фајл и распакуј га у неки фолдер на свом рачунару:
 
 
-.. image:: ../../_images/inst101m.jpg
-   :width: 600px
+.. figure:: ../../_images/inst101m.jpg
+   :width: 780px
    :align: center
-
+   :class: screenshot-shadow
 
 Потом покрени команду SETUP.BAT тако што ћеш два пута кликнути на њено име:
 
 
-.. image:: ../../_images/inst101n.png
-   :width: 600px
+.. figure:: ../../_images/inst101n.png
+   :width: 780px
    :align: center
+   :class: screenshot-shadow
 
 Ова команда ће радити неко време и при томе ће инсталирати све неопходне библиотеке
 за рад са Џупитер окружењем:
 
-.. image:: ../../_images/inst101c.jpg
-   :width: 600px
+.. figure:: ../../_images/inst101c.jpg
+   :width: 780px
    :align: center
-
+   :class: screenshot-shadow
 
 Када се команда заврши у фолдеру ће се појавити команда START_JUPYTER.BAT и пречица
 START_IDLE:
 
-.. image:: ../../_images/inst101p.png
-   :width: 600px
+.. figure:: ../../_images/inst101p.png
+   :width: 780px
    :align: center
-
+   :class: screenshot-shadow
+   
 Пречица START_IDLE ће нам требати у наредном сегменту курса у коме обрађујемо
 програмирање у Пајтону и за сада је слободно можемо игнорисати.
 
@@ -65,10 +67,10 @@ START_IDLE:
 виде линкови на радне свеске. Кликом на име, радна свеска се отвара у новом табу веб-прегледача:
 
 
-.. image:: ../../_images/inst103.png
-   :width: 600px
+.. figure:: ../../_images/inst103.png
+   :width: 780px
    :align: center
-
+   :class: screenshot-shadow
 
 Крени да читаш свеске и да их извршаваш корак по корак.
 
