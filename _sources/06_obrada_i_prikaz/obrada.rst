@@ -17,7 +17,9 @@
 
 .. technicalnote::
 
-    Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у `фолдеру за рад офлајн <https://github.com/Petlja/VIII_prog_rev_radni/archive/refs/heads/main.zip>`_ покренути Џупитер свеску `06_Osnove obrade i prikaza tabelarnih podataka.ipynb` на начин на који је то објашњено у поглављу `Покретање Џупитер радних свески </J0A/J0A.html#jupyter>`_ у уводу овог приручника. 
+    Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у `фолдеру за рад офлајн <https://github.com/Petlja/os_inf_prog_Radni/archive/refs/heads/main.zip>`_ покренути Џупитер свеску ``06_obrada_prikaz.ipynb``, на начин на који је то објашњено у поглављу `Покретање Џупитер радних свески </J0A/J0A.html#jupyter>`_ у уводу овог приручника, или тако што ћеш отићи на `овај линк <https://petlja.github.io/os8_inf_prog_radni/lab/index.html>`_ и тамо радити задатке. 
+
+ 
 
 Учитавање табеле из датотеке
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -12,7 +12,7 @@
 
 .. technicalnote::
 
-    Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у `фолдеру за рад офлајн <https://github.com/Petlja/VIII_prog_rev_radni/archive/refs/heads/main.zip>`_ покренути Џупитер свеску `04_Graficko_predstavljanje_podataka.ipynb` на начин на који је то објашњено у поглављу `Покретање Џупитер радних свески </J0A/J0A.html#jupyter>`_ у уводу овог приручника. 
+    Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у `фолдеру за рад офлајн <https://github.com/Petlja/os8_inf_prog_radni/archive/refs/heads/main.zip>`_ покренути Џупитер свеску ``04_graficko_predstavljanje.ipynb``, на начин на који је то објашњено у поглављу `Покретање Џупитер радних свески </J0A/J0A.html#jupyter>`_ у уводу овог приручника, или тако што ћеш отићи на `овај линк <https://petlja.github.io/os8_inf_prog_radni/lab/index.html>`_ и тамо радити задатке. 
 
 У следећем примеру ћемо помоћу функције ``.scatter()`` приказати тачке
 одређене са два низа координата: ``x=[3,4,5]`` и ``y=[4,2,1]``.
