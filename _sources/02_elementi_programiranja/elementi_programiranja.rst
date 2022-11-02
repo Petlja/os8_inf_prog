@@ -354,11 +354,11 @@
     a=5
     b=6
     if a==b:
-        print("a i b su jednaki.")
+        print('a i b su jednaki.')
     elif a<b:
-        print("a je manje od b.")
+        print('a je manje od b.')
     else:
-        print("a je veće od b.")       
+        print('a je veće od b.')       
 
 Други начин да проверимо више услова јесте да у *if-then-else* блоковима
 уведемо нове услове и ново гранање. Ако то радите, обратите пажњу да ти
