@@ -199,8 +199,8 @@
 .. activecode:: lista_2
     :nocodelens:
 
-    а = len(range(0,30,5))
-    print(а)
+    a = len(range(0,30,5))
+    print(a)
 
 Петље
 -----
