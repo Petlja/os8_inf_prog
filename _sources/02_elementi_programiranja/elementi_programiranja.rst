@@ -423,7 +423,7 @@
    # -*- acsection: general-init -*-
    # -*- acsection: main -*-
    def zbir(L):
-      # dopuni ovu fuknkciju
+       # dopuni ovu fuknkciju
    # Провера
    test1 = zbir([1, 2, 3, 4, 5])
    test2 = zbir([100, 200, 500])

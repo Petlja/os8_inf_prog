@@ -283,6 +283,7 @@
 променимо, друга ће памтити старе вредности.
 
 .. activecode:: copy
+    :passivecode: True
     :nocodelens:
 
     lista=[3,2,2,5,1,4,4]

@@ -17,7 +17,7 @@
 
 .. technicalnote::
 
-    Препоручујемо да ову лекцију покренеш на свом рачунару тако што ћеш у `фолдеру за рад офлајн <https://github.com/Petlja/VIII_prog_rev_radni/archive/refs/heads/main.zip>`_ покренути Џупитер свеску ``06_obrada_prikaz.ipynb``, на начин на који је то објашњено у поглављу `Покретање Џупитер радних свески <https://petlja.org/kurs/479/1/6123>`_ у уводу овог приручника, или тако што ћеш отићи на `овај линк <https://petlja.github.io/os8_inf_prog_radni/lab/index.html>`_ и тамо радити задатке. 
+    Препоручујемо да примере из ове лекције покренеш на свом рачунару тако што ћеш у `пакету фајлова за вежбу <https://github.com/Petlja/gim2_rac_prog_radni/archive/refs/heads/master.zip>`_ покренути Џупитер свеску ``06_obrada_prikaz.ipynb``, или тако што ћеш отићи на `овај линк <https://petlja.github.io/os8_inf_prog_radni/lab?path=06_obrada_prikaz.ipynb>`_ и тамо радити задатке. За детаљније инструкције погледај поглавље Фајлови за вежбу и коришћење Џупитер окружења.
 
  
 
