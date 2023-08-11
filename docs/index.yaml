@@ -1,4 +1,4 @@
-courseId: kurs-osmi-programiranje-revizija
+courseId: kurs-osmi
 description:
   externalLinks:
   - href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
@@ -67,18 +67,21 @@ lessons:
   - description: ''
     file: howto.html
     guid: 434b8b09-28c0-4e9f-844b-5c1be4ee76e6
+    normalized_title: Како да користиш приручник
     src: howto.rst
     title: Како да користиш приручник
     type: reading
   - description: ''
     file: J0A.html
     guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
+    normalized_title: Покретање Џупитер (Jupyter) радних свески
     src: J0A.rst
     title: Покретање Џупитер (*Jupyter*) радних свески
     type: reading
   - description: ''
     file: J01.html
     guid: 6170b1a8-9f82-4411-bada-38b6006e4f5f
+    normalized_title: Увод у Џупитер (Jupyter)
     src: J01.rst
     title: Увод у Џупитер (*Jupyter*)
     type: reading
@@ -92,6 +95,7 @@ lessons:
   - description: ''
     file: elementi_programiranja.html
     guid: d29131a9-3ed0-4cbc-8467-b7b8af1c7b0e
+    normalized_title: Елементи програмирања у Пајтону
     src: elementi_programiranja.rst
     title: Елементи програмирања у Пајтону
     type: reading
@@ -105,6 +109,7 @@ lessons:
   - description: ''
     file: nizovi.html
     guid: a1c8201c-a43f-49c8-98e3-9334b7211c3d
+    normalized_title: Рад са низовима података
     src: nizovi.rst
     title: Рад са низовима података
     type: reading
@@ -118,18 +123,21 @@ lessons:
   - description: ''
     file: graficko.html
     guid: fc7759c2-c948-4bf1-afa4-a4961a1b1698
+    normalized_title: Графичко представљање података
     src: graficko.rst
     title: Графичко представљање података
     type: reading
   - description: ''
     file: graficko2.html
     guid: f45f8fd3-0efc-4f40-bf3e-7f2cdea415d4
+    normalized_title: Линијски, тачкасти и стубични дијаграми
     src: graficko2.rst
     title: Линијски, тачкасти и стубични дијаграми
     type: reading
   - description: ''
     file: hist.html
     guid: 90d4eb01-3996-4abe-864c-71de22114772
+    normalized_title: Хистограм
     src: hist.rst
     title: Хистограм
     type: reading
@@ -143,12 +151,14 @@ lessons:
   - description: ''
     file: tabele_pandas.html
     guid: ea3f8c8a-3393-4801-85e1-fd6056501a83
+    normalized_title: Представљање табеларно задатих података помоћу листи
     src: tabele_pandas.rst
     title: Представљање табеларно задатих података помоћу листи
     type: reading
   - description: ''
     file: data_frame.html
     guid: 37b1d0f9-fa42-46c3-b427-5699b46f0e48
+    normalized_title: Библиотека pandas и структура података DataFrame
     src: data_frame.rst
     title: Библиотека pandas и структура података DataFrame
     type: reading
@@ -162,12 +172,14 @@ lessons:
   - description: ''
     file: obrada.html
     guid: 3bba89f2-3fb3-4b51-95fd-ed47162e56a6
+    normalized_title: Обрада табеларних података
     src: obrada.rst
     title: Обрада табеларних података
     type: reading
   - description: ''
     file: prikaz.html
     guid: 6ea62538-4f67-4017-a242-e4b02b3b83c9
+    normalized_title: Статистички и графички приказ табеларних података
     src: prikaz.rst
     title: Статистички и графички приказ табеларних података
     type: reading
