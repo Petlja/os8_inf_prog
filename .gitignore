@@ -10,3 +10,6 @@ update.py
 course.json
 export
 override.json
+docs
+.venv
+uv.lock
